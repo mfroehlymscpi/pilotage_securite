@@ -21,6 +21,8 @@
 * [ ] Déterminer le périmètre exact de l’analyse ISO 27005
   → “Ce périmètre sera fourni aux prestataires lors de la demande de devis.”
 
+[Tableau type à compléter](Phase1_1.md)
+
 #### ⏱️ Durée : 0,5 à 1 jour
 
 ---
