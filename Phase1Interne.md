@@ -33,20 +33,23 @@
 
 #### ✔ Actions à réaliser
 
-* [ ] Écrire un **cahier des charges synthétique** incluant :
-    * [ ] Analyse complète **ISO 27005**
-    * [ ] Registre des actifs
-    * [ ] Catalogue des menaces
-    * [ ] Liste des vulnérabilités
-    * [ ] Scénarios de risques
-    * [ ] Matrice probabilité × impact
-    * [ ] Plan de traitement (priorisé)
-    * [ ] Recommandations ISO 27002
-    * [ ] Feuille de route 12 mois
-    * [ ] Restitution orale
-* [ ] Ajouter contrainte : **pas d'exécution technique** (gouvernance uniquement)
-* [ ] Ajouter contrainte : **analyse tenant compte de notre secteur (fintech / SCPI)**
-* [ ] Ajouter contrainte : **prise en compte LLM / API / SaaS**
+* [ ] Écrire un **cahier des charges synthétique** spécifiant les **livrables attendus du prestataire** :
+    * [ ] **Analyse de risques complète ISO 27005**
+    * [ ] **Registre des actifs** : inventaire exhaustif (applications, données, infrastructures, services tiers)
+    * [ ] **Catalogue des menaces** : menaces pertinentes pour notre secteur (fintech/SCPI)
+    * [ ] **Liste des vulnérabilités** : techniques et organisationnelles identifiées
+    * [ ] **Scénarios de risques** : scénarios d'attaque et impacts métier
+    * [ ] **Matrice de risques** : probabilité × impact avec cotation claire
+    * [ ] **Plan de traitement des risques** : mesures priorisées par criticité et faisabilité
+    * [ ] **Recommandations ISO 27002** : mapping des contrôles applicables
+    * [ ] **Feuille de route sécurité 12 mois** : planning d'implémentation des mesures
+    * [ ] **Restitution orale** : présentation des résultats à la direction + équipe technique
+
+* [ ] Ajouter les **contraintes méthodologiques** :
+    * [ ] **Pas d'exécution technique** : analyse de gouvernance uniquement (pas de pentest, pas de scan)
+    * [ ] **Prise en compte du secteur** : fintech / SCPI / données financières / RGPD
+    * [ ] **Technologies modernes** : analyse incluant LLM, API REST, services SaaS
+    * [ ] **Format des livrables** : rapport détaillé (PDF) + fichiers de travail (Excel/CSV pour matrices)
 
 ---
 
