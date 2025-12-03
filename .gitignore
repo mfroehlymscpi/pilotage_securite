@@ -1,0 +1,41 @@
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Fichiers temporaires
+*.tmp
+*.bak
+*.log
+~$*
+
+# Documents de travail temporaires (brouillons)
+*_draft.*
+*_brouillon.*
+temp/
+tmp/
+
+# Fichiers sensibles (à ne JAMAIS committer)
+*_confidentiel.*
+*_prive.*
+*_secret.*
+*.key
+*.pem
+credentials.*
+secrets.*
+passwords.*
+
+# Exports et rapports avec données sensibles
+*_audit_report_*.pdf
+*_pentest_*.pdf
+rapport_confidentiel_*.pdf
+
+# Fichiers de travail personnels
+notes_perso.*
+todo_perso.*
