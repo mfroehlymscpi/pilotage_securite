@@ -18,8 +18,8 @@ Version 1.0 - Décembre 2025
 8. [Plan de Formation](#8-plan-de-formation)
 
 **Annexes :**
-- [Annexe A : Guide de Sélection des Prestataires](./annexes/A_Selection_Prestataires.md)
-- [Annexe B : Catalogue des Certifications](./annexes/B_Catalogue_Certifications.md)
+- [Annexe A : Guide de Sélection des Prestataires](annexes/A_Selection_Prestataires.md)
+- [Annexe B : Catalogue des Certifications](annexes/B_Catalogue_Certifications.md)
 
 ---
 

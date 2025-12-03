@@ -38,7 +38,7 @@ pilotage_securite/
 
 ## 📄 Document Principal
 
-### [Pilotage_Securite_2026.md](./Pilotage_Securite_2026.md)
+### [Pilotage_Securite_2026.md](Budget prévisionnel/Pilotage_Securite_2026.md)
 
 Le document de référence contenant :
 
@@ -59,7 +59,7 @@ Le document de référence contenant :
 
 ## 📚 Annexes
 
-### [Annexe A : Sélection des Prestataires](./annexes/A_Selection_Prestataires.md)
+### [Annexe A : Sélection des Prestataires](Budget prévisionnel/annexes/A_Selection_Prestataires.md)
 
 **9 prestataires pentest** comparés (Vaadata, SysDream, Wavestone, Connect3S, etc.)
 - Certifications (OSWE, OSCP, GWEB, PASSI ANSSI)
@@ -70,7 +70,7 @@ Le document de référence contenant :
 
 **Grille de sélection** avec critères obligatoires et recommandés
 
-### [Annexe B : Catalogue Certifications](./annexes/B_Catalogue_Certifications.md)
+### [Annexe B : Catalogue Certifications](Budget prévisionnel/annexes/B_Catalogue_Certifications.md)
 
 **Certifications gouvernance** (référent sécurité) :
 - ISO 27001 Lead Implementer (3 000 €, 5j)
@@ -84,7 +84,7 @@ Le document de référence contenant :
 
 **Total formation référent 2026 :** 12 700 € HT
 
-### [Annexe C : Glossaire](./annexes/C_Glossaire.md)
+### [Annexe C : Glossaire](Budget prévisionnel/annexes/C_Glossaire.md)
 
 Définitions techniques vulgarisées :
 - Pentest, AppSec, RGPD, ISO 27001, Active Directory

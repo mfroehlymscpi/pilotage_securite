@@ -18,8 +18,8 @@ Version 2.0 - Décembre 2025
 8. [Indicateurs de Suivi](#8-indicateurs-de-suivi)
 
 **Annexes :**
-- [Annexe A : Guide de Sélection des Prestataires](./annexes/A_Selection_Prestataires.md)
-- [Annexe B : Catalogue des Certifications](./annexes/B_Catalogue_Certifications.md)
+- [Annexe A : Guide de Sélection des Prestataires](annexes/A_Selection_Prestataires.md)
+- [Annexe B : Catalogue des Certifications](annexes/B_Catalogue_Certifications.md)
 
 ---
 
@@ -371,9 +371,7 @@ Q1 2026              Q2 2026              Q3-Q4 2026
 - ✅ Équipe sensibilisée (phishing, bonnes pratiques)
 - ✅ Roadmap claire pour croissance future
 
-**Décisions attendues :**
-1. Validation budget 20-28k€ pour 2026
-2. Validation lancement diagnostic Q1 2026
+
 
 **ROI :** Éviter 1 seul incident cyber ou sanction RGPD rembourse largement l'investissement.
 

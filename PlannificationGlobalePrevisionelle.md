@@ -1,13 +1,14 @@
 # ✅ **Workflow global — Pilotage Sécurité (vue d’ensemble)**
 
-## 🟦 **1. Avant le choix du prestataire**
+## 🟦 **1. Préparation et choix du prestataire**
 
-[Document d'étude](Phase1_1.md)
 
+### [Document d'étude](Phase1Interne.md)
 C'est une étape qu'on doit faire en interne pour démarcher les prestataires.
 Probablement mené par moi.
 
-1. **Définir le besoin et le périmètre**
+1. **Finaliser ce document de projet**
+2. **Définir le besoin et le périmètre**
    → Ce qu’on veut sécuriser (apps, data, SaaS, CI/CD, LLM…).
    Durée : **0,5 à 1 jour**
 
@@ -17,17 +18,19 @@ Probablement mené par moi.
 
 3. **Identifier et comparer les prestataires**
    → 3 à 5 sociétés spécialisées.
-   Durée : **2 à 4 jours**
+   Durée : **1 semaine** (Dépend grandement de leur temps de réponse mais on pourrais imposer une réponse au bout de 1 semaine)
 
 4. **Sélection & contractualisation**
    → choix, devis, signature.
-   Durée : **1 à 3 jours**
+   Durée : **1 à 3 jours** (Dépend également de leur disponibilité pour l'échange)
+5. Validation du buget
+
 
 ---
 
 ## 🟩 **2. Mission du prestataire (ISO 27005)**
 
-[Process habituels des prestataires](Phase2_WorkflowProcessHabituels.md)
+### [Process habituels des prestataires](Phase2_WorkflowProcessHabituels.md)
 
 5. **Analyse de risques ISO 27005 complète**
 
@@ -58,6 +61,9 @@ Probablement mené par moi.
 9. **Audits réguliers**
    → pentests, audits infra, audits RGPD, revues annuelles.
    Fréquence : **annuel**
+
+Durée et procédure seront définis par le prestataire.
+ChatGPT l'estime entre 1-6 mois.
 
 ---
 
