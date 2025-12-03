@@ -1,7 +1,7 @@
 # Pilotage Sécurité - Documentation Projet
 
 **Programme de cybersécurité 2026**
-Fintech conseil en investissement SCPI
+Startup Fintech SCPI (< 10 employés)
 
 ---
 
@@ -29,10 +29,10 @@ pilotage_securite/
 
 ## 🎯 Objectif du Projet
 
-Structurer, piloter et coordonner la cybersécurité de l'entreprise **sans internaliser l'exécution technique**.
+**Approche pragmatique** pour startup < 10 employés : structurer **progressivement** la cybersécurité en s'appuyant sur des prestataires externes.
 
-**Rôle interne :** Référent sécurité / Chef de projet sécurité
-**Mission :** Sélectionner et piloter les prestataires externes (pentest, audits, certifications)
+**Rôle interne :** Référent sécurité (temps partiel, 1-2j/mois)
+**Mission :** Coordonner prestataires pour diagnostic, audits ciblés, et mise en conformité RGPD
 
 ---
 
@@ -44,16 +44,16 @@ Le document de référence contenant :
 
 | Section | Contenu |
 |---------|---------|
-| **1. Introduction** | Contexte, objectifs, périmètre technique |
-| **2. Risques & Enjeux** | Cartographie cyberrisques, impact business |
-| **3. Organisation** | Rôles, interlocuteurs internes/externes |
-| **4. Roadmap 2026** | Planning trimestriel détaillé (Q1-Q4) |
-| **5. Budget** | 139 700 € HT en 2026, 70-80k€/an ensuite |
-| **6. Livrables** | Documents à produire (PSSI, politiques, KPI) |
-| **7. KPIs** | Indicateurs techniques, org., budgétaires |
-| **8. Formation** | Plan de formation référent + équipe dev |
+| **1. Introduction** | Contexte startup < 10 pers, contraintes budget |
+| **2. Risques & Enjeux** | 5 risques cyber prioritaires startup |
+| **3. Organisation** | Référent temps partiel + prestataires conseils |
+| **4. Approche Pragmatique** | Ce qu'on fait / ne fait pas en 2026 |
+| **5. Phase 1 (2026)** | Q1 Diagnostic → Q2 Audits → Q3-Q4 Actions |
+| **6. Budget** | 20-28k€ HT en 2026, 13-20k€/an ensuite |
+| **7. Livrables** | Essentiels fournis par prestataires + templates |
+| **8. KPI** | 5 indicateurs simples de suivi |
 
-**Usage :** Document à présenter à la Direction pour validation budget/roadmap
+**Usage :** Document à présenter Direction pour validation budget 20-28k€
 
 ---
 
@@ -95,49 +95,49 @@ Définitions techniques vulgarisées :
 
 ---
 
-## 📊 Chiffres Clés 2026
+## 📊 Chiffres Clés 2026 (Startup)
 
 | Indicateur | Valeur |
 |------------|--------|
-| **Budget total** | 139 700 € HT (≈ 167k€ TTC) |
-| **Audits applicatifs** | 18 000 € (pentest VueJS/Symfony/API) |
-| **Certification ISO 27001** | 40 000 € (accompagnement + certif) |
-| **Formation référent** | 12 700 € (4 certifications) |
-| **Audits RGPD** | 18 000 € (initial + suivi) |
-| **Sensibilisation phishing** | 5 000 € (3 campagnes/an) |
+| **Budget total 2026** | 20 000 € - 28 000 € HT (24-34k€ TTC) |
+| **Diagnostic initial** | 3 000 € - 6 000 € (consultant 3-5j) |
+| **Pentest applicatif** | 5 000 € - 8 000 € (VueJS/Symfony/API) |
+| **Audit RGPD** | 5 000 € - 8 000 € (conformité minimale) |
+| **Sensibilisation** | 1 500 € - 2 500 € (2 campagnes phishing) |
+| **Formation dev** | 1 500 € - 2 500 € (secure coding 1j) |
 
-**Budget récurrent (2027+) :** 70 000 € - 80 000 € HT/an
-
----
-
-## 🗓️ Roadmap 2026
-
-```
-Q1 (Jan-Mars)          Q2 (Avr-Juin)          Q3 (Juil-Sep)          Q4 (Oct-Déc)
-│                      │                      │                      │
-│ DIAGNOSTIC           │ APPLICATIF & RGPD    │ REMÉDIATION          │ CERTIFICATION
-│                      │                      │                      │
-├─ Audit org.          ├─ Pentest web/API     ├─ Corrections vulns  ├─ Certification ISO
-├─ Audit AD            ├─ Audit RGPD          ├─ Formation dev      ├─ Re-test pentest
-├─ Audit infra         ├─ Phishing #1         ├─ Rédaction PSSI     ├─ Bilan annuel
-├─ Formation ISO LI    ├─ Formation CISM      ├─ Accompagnement ISO ├─ Formation Lead Auditor
-└─ 29 000 €            └─ 41 200 €            └─ 43 500 €           └─ 26 000 €
-```
-
-**Jalon critique :** Certification ISO 27001 obtenue Q4 2026
+**Budget récurrent (2027+) :** 13 000 € - 20 000 € HT/an
 
 ---
 
-## 🎓 Certifications Prioritaires Référent Sécurité
+## 🗓️ Roadmap 2026 (Startup)
 
-| Certification | Trimestre 2026 | Coût HT | Organisme |
-|---------------|----------------|---------|-----------|
-| ISO 27001 Lead Implementer | Q1 (Janvier) | 3 000 € | M2i / IB Formation |
-| CISM | Q2 (Avril) | 4 200 € | CERTyou / EduGroupe |
-| CIPP/E | Q2 (Juin) | 2 000 € | PLB / Prosica |
-| ISO 27001 Lead Auditor | Q4 (Octobre) | 3 500 € | PECB / CERTyou |
+```
+Q1 (Jan-Mars)          Q2 (Avr-Juin)          Q3-Q4 (Juil-Déc)
+│                      │                      │
+│ DIAGNOSTIC           │ AUDITS CIBLÉS        │ ACTIONS & FORMATION
+│                      │                      │
+├─ Diagnostic 360°     ├─ Pentest web/API     ├─ Corrections vulns critiques
+├─ Roadmap 3 ans       ├─ Audit RGPD          ├─ Phishing #1 et #2
+├─ Modèles politiques  ├─ Rapports            ├─ Formation dev (1j)
+│                      │                      ├─ Politiques de base
+└─ 3-6k€               └─ 10-16k€             └─ 5-9k€
+```
 
-**TOTAL :** 12 700 € HT / 17 jours
+**Jalon critique :** Vulnérabilités critiques corrigées Q3 2026
+
+---
+
+## 🎓 Formation (Startup)
+
+**Approche :** Pas de certifications référent en 2026 (hors budget startup).
+**Alternative :** S'appuyer sur l'expertise des prestataires pour conseil.
+
+**Formation équipe dev :**
+- Atelier secure coding OWASP (1j, 6-8 personnes) : 1 500 € - 2 500 €
+- Formation par prestataire pentest (inclus dans mission)
+
+**Montée en compétence :** Si croissance future (50+ employés), envisager certifications référent
 
 ---
 

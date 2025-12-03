@@ -45,7 +45,7 @@ Utilisation d'appareils personnels (smartphone, laptop) à des fins professionne
 Certification pentest d'EC-Council. Reconnaissance moyenne, moins exigeante qu'OSCP/OSWE.
 
 ### CI/CD (Continuous Integration / Continuous Deployment)
-Pipeline automatisé de build, test et déploiement code. Sécuriser CI/CD essentiel (injection malware, compromission supply chain).
+Pipeline automatisé de build, test et déploiement code. Bonnes pratiques sécurité recommandées par prestataires.
 
 ### CIPP/E (Certified Information Privacy Professional / Europe)
 Certification IAPP sur protection données et RGPD. Essentielle pour DPO et référents RGPD.

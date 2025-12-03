@@ -1,7 +1,8 @@
 # Pilotage Sécurité 2026
 
 **Document de référence - Programme de sécurité informatique**
-Version 1.0 - Décembre 2025
+Startup Fintech SCPI (< 10 employés)
+Version 2.0 - Décembre 2025
 
 ---
 
@@ -10,16 +11,15 @@ Version 1.0 - Décembre 2025
 1. [Introduction & Contexte](#1-introduction--contexte)
 2. [Risques & Enjeux Métier](#2-risques--enjeux-métier)
 3. [Organisation & Rôles](#3-organisation--rôles)
-4. [Roadmap 2026](#4-roadmap-2026)
-5. [Budget Prévisionnel](#5-budget-prévisionnel)
-6. [Livrables du Référent Sécurité](#6-livrables-du-référent-sécurité)
-7. [Indicateurs de Suivi (KPI)](#7-indicateurs-de-suivi-kpi)
-8. [Plan de Formation](#8-plan-de-formation)
+4. [Approche Pragmatique](#4-approche-pragmatique)
+5. [Phase 1 : Diagnostic Initial (2026)](#5-phase-1--diagnostic-initial-2026)
+6. [Budget Prévisionnel Phase 1](#6-budget-prévisionnel-phase-1)
+7. [Livrables Essentiels](#7-livrables-essentiels)
+8. [Indicateurs de Suivi](#8-indicateurs-de-suivi)
 
 **Annexes :**
 - [Annexe A : Guide de Sélection des Prestataires](./annexes/A_Selection_Prestataires.md)
 - [Annexe B : Catalogue des Certifications](./annexes/B_Catalogue_Certifications.md)
-- [Annexe C : Glossaire Technique](./annexes/C_Glossaire.md)
 
 ---
 
@@ -27,470 +27,379 @@ Version 1.0 - Décembre 2025
 
 ### 1.1 Présentation du Projet
 
-Le projet **Pilotage Sécurité** a pour objectif de structurer, organiser et superviser l'ensemble des enjeux de cybersécurité de l'entreprise, **sans internaliser l'exécution technique**.
+Le projet **Pilotage Sécurité** vise à **structurer progressivement** la cybersécurité d'une startup fintech spécialisée SCPI, **en s'appuyant sur des prestataires externes** pour l'expertise technique.
 
-Dans un contexte où nos activités reposent fortement sur des applications web (VueJS, Symfony), des données financières sensibles et des processus d'agrégation de données SCPI, il devient indispensable d'instaurer une démarche sécurité méthodique, continue et pilotée.
+**Contexte entreprise :**
+- Startup < 10 employés
+- Applications web (VueJS, Symfony) et API REST
+- Données financières sensibles (SCPI)
+- Croissance progressive, budget limité
 
 ### 1.2 Objectifs
 
-L'ambition du projet est double :
-
-1. **Mettre en place une gouvernance sécurité claire**, couvrant :
-   - Bonnes pratiques internes
-   - Conformité RGPD/ISO 27001
-   - Politiques d'accès et gestion des identités
-   - Gestion du télétravail
-   - Sécurité des développements (CI/CD)
-   - Encadrement des usages LLM
-
-2. **Sélectionner, coordonner et piloter des prestataires spécialisés** pour :
-   - Audits techniques (pentests applicatifs, infrastructure)
-   - Audits organisationnels
-   - Audits RGPD
-   - Sensibilisation et formation
-   - Certification ISO 27001
+1. **Identifier les risques cyber critiques** via un diagnostic initial
+2. **Prioriser les actions** selon impact business et budget
+3. **S'appuyer sur des prestataires** pour conseil et exécution technique
+4. **Structurer progressivement** : gouvernance minimale puis montée en maturité
 
 ### 1.3 Périmètre Technique
 
-| Périmètre | Technologies | Sensibilité |
-|-----------|--------------|-------------|
-| **Applications web** | VueJS (front), Symfony (back) | ⭐⭐⭐⭐⭐ Critique |
-| **API & intégrations** | REST API, agrégation SCPI | ⭐⭐⭐⭐⭐ Critique |
-| **Infrastructure** | Serveurs, Docker, réseau | ⭐⭐⭐⭐ Importante |
-| **Données** | Données clients, transactions | ⭐⭐⭐⭐⭐ Critique |
-| **Active Directory** | Gestion identités, SSO | ⭐⭐⭐⭐ Importante |
+| Périmètre | Technologies | Criticité Startup |
+|-----------|--------------|-------------------|
+| **Applications web** | VueJS, Symfony | 🔴 Critique (cœur métier) |
+| **API agrégation SCPI** | REST API | 🔴 Critique (données sensibles) |
+| **Infrastructure** | Serveurs, Docker | 🟠 Importante |
+| **Données clients** | BDD, fichiers | 🔴 Critique (RGPD) |
 
-### 1.4 Contexte Métier
+### 1.4 Contraintes Startup
 
-**Secteur :** Fintech / Conseil en investissement SCPI
-**Obligations réglementaires :** RGPD, conformité financière
-**Particularités :** Manipulation données financières sensibles, agrégation multi-sources
+**Ressources limitées :**
+- ❌ Pas de RSSI dédié temps plein
+- ❌ Pas d'équipe sécurité interne
+- ❌ Budget contraint (< 30-40k€/an)
+- ✅ Besoin pragmatique : commencer simple, prioriser l'essentiel
+
+**Approche retenue :** Diagnostic initial → Priorisation → Actions ciblées
 
 ---
 
 ## 2. Risques & Enjeux Métier
 
-### 2.1 Cartographie des Risques Cyber
+### 2.1 Cartographie des Risques Cyber (Startup)
 
-| Risque | Impact Business | Probabilité | Criticité | Mitigation |
-|--------|----------------|-------------|-----------|------------|
-| **Fuite données clients SCPI** | - Sanctions RGPD (jusqu'à 20M€)<br>- Atteinte image de marque<br>- Perte clients | Moyenne | 🔴 CRITIQUE | Audit RGPD, chiffrement, DLP |
-| **Compromission plateforme web** | - Indisponibilité service<br>- Perte revenus<br>- Responsabilité contractuelle | Moyenne | 🔴 CRITIQUE | Pentest réguliers, WAF, monitoring |
-| **Injection API agrégation** | - Corruption données SCPI<br>- Erreurs décisions investissement<br>- Responsabilité juridique | Faible | 🟠 MAJEUR | Pentest API, validation entrées, tests |
-| **Attaque supply chain** | - Backdoor dépendances<br>- Compromission CI/CD<br>- Diffusion malware | Moyenne | 🟠 MAJEUR | SCA, SBOM, revue dépendances |
-| **Utilisation malveillante LLM** | - Prompt injection<br>- Fuite données via LLM<br>- Génération contenu frauduleux | Faible | 🟡 MODÉRÉ | Politique LLM, isolation, monitoring |
-| **Compromission AD** | - Élévation privilèges<br>- Mouvement latéral<br>- Prise de contrôle totale | Moyenne | 🔴 CRITIQUE | Audit AD, tiering, MFA |
-| **Social engineering** | - Phishing collaborateurs<br>- Accès frauduleux<br>- Exfiltration données | Élevée | 🟠 MAJEUR | Formation, campagnes phishing |
+| Risque | Impact Startup | Probabilité | Criticité | Action Prioritaire |
+|--------|----------------|-------------|-----------|-------------------|
+| **Fuite données clients** | - Sanction RGPD<br>- Perte confiance | Moyenne | 🔴 CRITIQUE | Audit RGPD léger + mise conformité |
+| **Compromission appli web** | - Indisponibilité<br>- Perte clients | Moyenne | 🔴 CRITIQUE | Pentest applicatif ciblé |
+| **Phishing collaborateurs** | - Accès frauduleux<br>- Vol données | Élevée | 🟠 MAJEUR | Sensibilisation (simple) |
+| **Injection API** | - Corruption données | Faible | 🟠 MAJEUR | Pentest API |
+| **Perte/vol matériel** | - Accès données locales | Moyenne | 🟡 MODÉRÉ | Chiffrement, politique BYOD |
 
-**Légende Criticité :**
-- 🔴 **CRITIQUE** : Impact très élevé, traitement prioritaire immédiat
-- 🟠 **MAJEUR** : Impact élevé, traitement dans l'année
-- 🟡 **MODÉRÉ** : Impact moyen, surveillance et traitement progressif
+**Focus startup :** Traiter d'abord 🔴 CRITIQUE avec budget limité
 
 ### 2.2 Enjeux Business
 
 **Pour la Direction :**
-- Conformité réglementaire (éviter sanctions)
-- Protection réputation et confiance clients
-- Continuité d'activité
-
-**Pour le Métier :**
-- Fiabilité des données SCPI
-- Disponibilité des plateformes
-- Qualité de service
+- Éviter sanction RGPD (peut tuer une startup)
+- Protéger réputation (clients B2C sensibles données finance)
+- Assurer disponibilité plateforme (revenus)
 
 **Pour l'IT :**
-- Réduction surface d'attaque
-- Amélioration qualité code
-- Industrialisation sécurité (DevSecOps)
+- Sécuriser applis sans ralentir développement
+- Bonnes pratiques dev (secure coding basique)
 
 ---
 
 ## 3. Organisation & Rôles
 
-### 3.1 Rôle du Référent Sécurité (Interne)
+### 3.1 Rôle Référent Sécurité (Interne, Temps Partiel)
 
-**Mission :** Pilotage et coordination sécurité (SANS exécution technique)
+**Mission :** Coordination sécurité, **PAS d'exécution technique**
 
 **Responsabilités :**
-- ✅ Définir stratégie et roadmap sécurité
-- ✅ Sélectionner et piloter prestataires externes
-- ✅ Rédiger politiques et procédures internes
-- ✅ Suivre remédiation des vulnérabilités
-- ✅ Animer sensibilisation et formation
-- ✅ Reporter à la direction (KPI, incidents)
-- ❌ PAS d'exécution technique (pentests, configuration firewall, etc.)
+- ✅ Identifier prestataire pour diagnostic initial
+- ✅ Suivre recommandations prestataires
+- ✅ Rédiger politiques simples (avec aide prestataire)
+- ✅ Organiser sensibilisation phishing (campagne simple)
+- ❌ PAS de pentest interne
+- ❌ PAS de config firewall/infra
+- ❌ PAS d'audit technique
 
-### 3.2 Interlocuteurs Internes
+**Temps estimé :** 1-2 jours/mois (20-40h/an)
 
-| Rôle | Implication | Fréquence |
-|------|-------------|-----------|
-| **Direction** | Validation budget, arbitrage risques | Trimestrielle |
-| **CTO** | Validation technique, priorisation | Mensuelle |
-| **Équipe Développement** | Application recommandations, formation | Hebdomadaire |
-| **Équipe Data** | Sécurisation pipelines, API | Mensuelle |
-| **DPO** (si existe) | Coordination RGPD | Mensuelle |
-| **DAF** | Budget, assurance cyber | Trimestrielle |
+### 3.2 Prestataires Externes
 
-### 3.3 Prestataires Externes
+**Rôle clé :** Les prestataires doivent **CONSEILLER** la startup sur :
+- Quelles politiques mettre en place (adaptées à une TPE)
+- Quelles bonnes pratiques adopter
+- Quelle gouvernance minimale (pragmatique, pas ISO 27001 tout de suite)
 
-| Type | Mission | Exemples |
-|------|---------|----------|
-| **Pentest AppSec** | Tests intrusion applications web/API | Vaadata, SysDream, Connect3S |
-| **Audit Infrastructure** | Sécurité réseau, firewall, VPN | AGESYS, Weodeo, REDOPUS |
-| **Audit Organisationnel** | Gouvernance, politiques, PSSI | Wavestone, AlgoSecure, Digitemis |
-| **Audit RGPD** | Conformité, registre, PIA | Consultants DPO/CIPP-E |
-| **Audit Active Directory** | Sécurité AD, privilèges, mots de passe | PwC, consultants SSI |
-| **Formation & Sensibilisation** | Phishing, secure coding | SysDream, Intuity, Exodata |
-| **Certification ISO 27001** | Accompagnement + certification | Consultant + AFNOR |
+| Type Prestataire | Mission | Quand ? |
+|------------------|---------|---------|
+| **Consultant sécurité généraliste** | Diagnostic 360° + roadmap | Phase 1 (2026 Q1) |
+| **Pentester AppSec** | Audit applications VueJS/Symfony/API | Phase 1 (2026 Q2) |
+| **Consultant RGPD** | Audit RGPD léger + mise conformité | Phase 1 (2026 Q2-Q3) |
+| **Formation/Sensibilisation** | Campagne phishing, bonnes pratiques dev | Phase 1 (2026 Q3-Q4) |
 
 ---
 
-## 4. Roadmap 2026
+## 4. Approche Pragmatique
+
+### 4.1 Principe : Commencer Simple
+
+**Ce qu'on NE FAIT PAS en 2026 (trop tôt pour une startup) :**
+- ❌ Certification ISO 27001 (40-50k€, trop complexe pour < 10 pers)
+- ❌ Certifications multiples référent (12k€+, pas prioritaire)
+- ❌ Red Team / intrusion physique (30-60k€, hors budget)
+- ❌ Audits infrastructure lourds (serveurs gérés par hébergeur probablement)
+- ❌ Audits Active Directory (si pas d'AD interne)
+- ❌ Outils sécurité coûteux (SIEM, SAST/DAST enterprise)
+
+**Ce qu'on FAIT en 2026 (essentiel startup) :**
+- ✅ **Diagnostic sécurité initial** par consultant expérimenté
+- ✅ **Pentest applicatif ciblé** (VueJS/Symfony/API)
+- ✅ **Audit RGPD pragmatique** (conformité minimale)
+- ✅ **Sensibilisation phishing** (campagne simple, pas chère)
+- ✅ **Politiques de base** (mots de passe, télétravail, BYOD)
+- ✅ **Bonnes pratiques dev** (formation secure coding légère)
+
+### 4.2 Philosophie : Prestataires = Conseil + Exécution
+
+Les prestataires doivent :
+1. **Diagnostiquer** l'existant
+2. **Conseiller** sur les priorités adaptées à une startup
+3. **Exécuter** les audits techniques (pentest)
+4. **Accompagner** la mise en conformité (RGPD)
+5. **Former** l'équipe (bonnes pratiques)
+
+**Le référent interne** coordonne et suit, mais s'appuie à 100% sur leur expertise.
+
+---
+
+## 5. Phase 1 : Diagnostic Initial (2026)
 
 ### Vue d'ensemble
 
 ```
-Q1 2026          Q2 2026          Q3 2026          Q4 2026
-│                │                │                │
-│ DIAGNOSTIC     │ APPLICATIF     │ REMÉDIATION    │ CERTIFICATION
-│                │                │                │
-▼                ▼                ▼                ▼
+Q1 2026              Q2 2026              Q3-Q4 2026
+│                    │                    │
+│ DIAGNOSTIC         │ AUDITS CIBLÉS      │ ACTIONS & FORMATION
+│                    │                    │
+▼                    ▼                    ▼
 ```
 
-### Q1 2026 (Jan-Mars) - Phase Diagnostic
+### Q1 2026 (Jan-Mars) - Diagnostic & Priorisation
 
-**Objectif :** Établir l'état des lieux sécurité
+**Action 1 : Diagnostic Sécurité Initial**
 
-| Action | Prestataire | Durée | Budget | Livrable |
-|--------|-------------|-------|--------|----------|
-| **Formation ISO 27001 Lead Implementer** | EduGroupe / M2i | 5j | 3 000 € | Certification interne |
-| **Audit organisationnel initial** | Cabinet PASSI | 7-10j | 10 000 € | Rapport + plan action |
-| **Audit Active Directory** | Consultant SSI | 5-7j | 7 000 € | Rapport + quick wins |
-| **Audit infrastructure réseau** | PME spécialisée | 5j | 6 000 € | Schémas + recommandations |
-| **Inventaire actifs & cartographie risques** | Interne + consultant | 5j | 3 000 € | Registre actifs, matrice risques |
+| Prestataire | Mission | Durée | Budget |
+|-------------|---------|-------|--------|
+| Consultant sécurité généraliste | - Analyse existant (applis, infra, orga)<br>- Cartographie risques startup<br>- Roadmap priorisée 3 ans<br>- Conseil gouvernance minimale | 3-5 jours | 3 000 € - 6 000 € |
 
-**Budget Q1 : 29 000 €**
+**Livrables attendus :**
+- Rapport diagnostic (forces, faiblesses, risques)
+- Roadmap priorisée selon budget startup
+- Modèles politiques de base (mots de passe, télétravail)
+- Recommandations audits prioritaires
 
-**Jalons de validation :**
-- ✅ Validation rapport audit org. par Direction (fin mars)
-- ✅ Priorisation plan action avec CTO
-- ✅ Lancement correctifs quick wins AD
-
----
-
-### Q2 2026 (Avr-Juin) - Phase Applicative & RGPD
-
-**Objectif :** Sécuriser les applications critiques et conformité RGPD
-
-| Action | Prestataire | Durée | Budget | Livrable |
-|--------|-------------|-------|--------|----------|
-| **Formation CISM** | CERTyou / EduGroupe | 5j | 4 200 € | Certification interne |
-| **Pentest applications web** (VueJS/Symfony) | OSWE/GWEB certifié | 10j | 12 000 € | Rapport vulnérabilités + PoC |
-| **Pentest API agrégation SCPI** | Même prestataire | 5j | 6 000 € | Rapport API |
-| **Audit RGPD initial** | Consultant CIPP-E/DPO | 12j | 15 000 € | Registre, PIA, plan conformité |
-| **Campagne phishing (1ère vague)** | Plateforme sensibilisation | - | 2 000 € | Taux clics, sensibilisation |
-| **Formation CIPP/E** | PLB / Prosica | 2j | 2 000 € | Certification interne |
-
-**Budget Q2 : 41 200 €**
-
-**Jalons de validation :**
-- ✅ Présentation résultats pentest à Direction + CTO (fin juin)
-- ✅ Validation plan remédiation vulnérabilités (criticité)
-- ✅ Lancement corrections critiques (délai max 1 mois)
+**Jalons :**
+- Fin mars : Présentation diagnostic à la Direction
+- Validation budget actions Q2-Q4
 
 ---
 
-### Q3 2026 (Juil-Sep) - Phase Remédiation & Formation
+### Q2 2026 (Avr-Juin) - Audits Applicatifs
 
-**Objectif :** Corriger vulnérabilités et monter en compétence
+**Action 2 : Pentest Applicatif Ciblé**
 
-| Action | Prestataire | Durée | Budget | Livrable |
-|--------|-------------|-------|--------|----------|
-| **Support remédiation pentests** | Même prestataire Q2 | 3j | 3 000 € | Validation corrections |
-| **Formation équipe dev (secure coding)** | SysDream / EduGroupe | 2j | 4 000 € | Équipe formée OWASP |
-| **Rédaction PSSI & politiques** | Interne + consultant | 10j | 5 000 € | PSSI, charte, procédures |
-| **Accompagnement ISO 27001 (Phase 1)** | Consultant ISO | 20j | 25 000 € | SMSI, documentation ISO |
-| **Déploiement outils sécurité (SAST/DAST)** | Interne | - | 5 000 € | Intégration CI/CD |
-| **Campagne phishing (2ème vague)** | Plateforme | - | 1 500 € | Mesure progrès |
+| Prestataire | Mission | Durée | Budget |
+|-------------|---------|-------|--------|
+| Pentester AppSec (OSWE/GWEB) | - Pentest VueJS (front)<br>- Pentest Symfony (back)<br>- Pentest API agrégation SCPI<br>- Tests OWASP Top 10 | 5-7 jours | 5 000 € - 8 000 € |
 
-**Budget Q3 : 43 500 €**
+**Livrables :**
+- Rapport vulnérabilités (criticité CVSS)
+- Preuves de concept (PoC) exploitabilité
+- Recommandations corrections priorisées
+- Re-test après corrections (1j inclus)
 
-**Jalons de validation :**
-- ✅ Validation PSSI par Direction (fin août)
-- ✅ Déploiement politiques internes (charte, télétravail, etc.)
-- ✅ Audit interne blanc ISO 27001 (mi-septembre)
+**Action 3 : Audit RGPD Pragmatique**
 
----
+| Prestataire | Mission | Durée | Budget |
+|-------------|---------|-------|--------|
+| Consultant RGPD/DPO | - Audit conformité RGPD<br>- Registre traitements<br>- Politique confidentialité<br>- Mentions légales<br>- Accompagnement mise conformité | 5-7 jours | 5 000 € - 8 000 € |
 
-### Q4 2026 (Oct-Déc) - Phase Certification & Bilan
+**Livrables :**
+- Registre des traitements
+- Modèles documents (politique confidentialité, CGU)
+- Plan d'actions conformité
+- Support questions RGPD (3 mois)
 
-**Objectif :** Certification ISO 27001 et clôture annuelle
-
-| Action | Prestataire | Durée | Budget | Livrable |
-|--------|-------------|-------|--------|----------|
-| **Formation ISO 27001 Lead Auditor** | PECB / CERTyou | 5j | 3 500 € | Certification interne |
-| **Certification ISO 27001 (audit initial)** | AFNOR Certification | 5j | 15 000 € | Certificat ISO 27001 |
-| **Re-test pentest (après corrections)** | Même prestataire Q2 | 3j | 3 000 € | Validation remédiation |
-| **Campagne phishing (3ème vague)** | Plateforme | - | 1 500 € | Bilan annuel sensibilisation |
-| **Audit RGPD suivi** | Consultant RGPD | 3j | 3 000 € | Rapport conformité |
-| **Bilan annuel + Roadmap 2027** | Interne | - | - | Présentation Direction |
-
-**Budget Q4 : 26 000 €**
-
-**Jalons de validation :**
-- ✅ Obtention certificat ISO 27001 (novembre)
-- ✅ Validation remédiation 100% vulnérabilités critiques
-- ✅ Présentation bilan 2026 + roadmap 2027 (décembre)
+**Jalons Q2 :**
+- Fin juin : Rapports pentest + RGPD validés
+- Priorisation corrections (critiques < 1 mois, majeures < 3 mois)
 
 ---
 
-### Synthèse Annuelle 2026
+### Q3-Q4 2026 (Juil-Déc) - Remédiation & Formation
 
-| Trimestre | Phase | Budget | Cumul |
-|-----------|-------|--------|-------|
-| **Q1** | Diagnostic | 29 000 € | 29 000 € |
-| **Q2** | Applicatif & RGPD | 41 200 € | 70 200 € |
-| **Q3** | Remédiation & Formation | 43 500 € | 113 700 € |
-| **Q4** | Certification & Bilan | 26 000 € | 139 700 € |
+**Action 4 : Corrections Vulnérabilités**
 
-**TOTAL 2026 : 139 700 € HT** (≈ 167 000 € TTC)
+| Qui | Mission | Durée | Budget |
+|-----|---------|-------|--------|
+| Équipe dev interne | Correction vulnérabilités critiques/majeures | Variable | Temps interne |
+| Pentester (support) | Support questions corrections (optionnel) | 1-2 jours | 1 000 € - 2 000 € |
+
+**Action 5 : Sensibilisation & Formation**
+
+| Prestataire | Mission | Durée | Budget |
+|-------------|---------|-------|--------|
+| Plateforme phishing (Intuity, Exodata) | 2 campagnes phishing (Juil + Oct) | - | 1 500 € - 2 500 € |
+| Formation secure coding | Atelier OWASP Top 10 pour dev (1j, 6-8 pers) | 1 jour | 1 500 € - 2 500 € |
+
+**Action 6 : Politiques de Base**
+
+| Qui | Mission | Durée | Budget |
+|-----|---------|-------|--------|
+| Référent interne + templates prestataire | Rédaction politique mots de passe, télétravail, BYOD | 2-3 jours | Temps interne |
+
+**Jalons Q3-Q4 :**
+- Sept : 100% vulnérabilités critiques corrigées
+- Oct : Campagne phishing #2, taux clics < 20%
+- Déc : Politiques de base déployées, bilan 2026
 
 ---
 
-## 5. Budget Prévisionnel
+## 6. Budget Prévisionnel Phase 1
 
-### 5.1 Budget 2026 Détaillé
+### Budget 2026 (Startup < 10 pers)
 
 | Poste | Détail | Budget HT |
 |-------|--------|-----------|
-| **Formation référent sécurité** | ISO 27001 LI/LA, CISM, CIPP/E | 12 700 € |
-| **Audits applicatifs** | Pentest web/API (10+5j) | 18 000 € |
-| **Audits infrastructure** | Réseau, firewall, VPN | 6 000 € |
-| **Audits Active Directory** | Sécurité AD, privilèges | 7 000 € |
-| **Audits organisationnels** | Gouvernance, PSSI, conformité | 10 000 € |
-| **Audits RGPD** | Initial + suivi | 18 000 € |
-| **Certification ISO 27001** | Accompagnement + certification | 40 000 € |
-| **Formation équipe dev** | Secure coding (2j) | 4 000 € |
-| **Sensibilisation (phishing)** | 3 campagnes annuelles | 5 000 € |
-| **Outils sécurité (SAST/DAST)** | Licences annuelles | 5 000 € |
-| **Support & remédiations** | Assistance post-audit | 9 000 € |
-| **Contingence (10%)** | Audits complémentaires, urgences | 5 000 € |
-| **TOTAL 2026** | | **139 700 € HT** |
+| **Diagnostic initial** | Consultant sécurité (3-5j) | 3 000 € - 6 000 € |
+| **Pentest applicatif** | VueJS + Symfony + API (5-7j) | 5 000 € - 8 000 € |
+| **Audit RGPD** | Audit + accompagnement (5-7j) | 5 000 € - 8 000 € |
+| **Support remédiation** | Assistance correctifs (1-2j) | 1 000 € - 2 000 € |
+| **Sensibilisation phishing** | 2 campagnes annuelles | 1 500 € - 2 500 € |
+| **Formation dev** | Secure coding OWASP (1j) | 1 500 € - 2 500 € |
+| **Contingence (10%)** | Imprévus, audits complémentaires | 1 700 € - 2 900 € |
+| **TOTAL 2026** | | **18 700 € - 32 000 € HT** |
 
-### 5.2 Budget Années Suivantes (2027-2029)
+**Fourchette réaliste startup : 20 000 € - 28 000 € HT (24-34k€ TTC)**
+
+### Budget Années Suivantes (2027-2028)
 
 | Poste | Fréquence | Budget annuel HT |
 |-------|-----------|------------------|
-| **Audits applicatifs** | 1-2x/an | 12 000 € - 18 000 € |
-| **Audits infrastructure** | 1x/2 ans | 3 000 € (moyen.) |
-| **Audits AD (suivi)** | 1x/2 ans | 2 500 € (moyen.) |
-| **Audits org. (suivi)** | 1x/2 ans | 4 000 € (moyen.) |
-| **Audits RGPD** | 1x/an | 5 000 € - 8 000 € |
-| **ISO 27001 surveillance** | 1x/an | 12 000 € |
-| **Sensibilisation continue** | Continu | 5 000 € |
-| **Outils sécurité** | Annuel | 5 000 € |
-| **Formation dev** | 1x/2 ans | 2 000 € (moyen.) |
-| **Red Team (optionnel)** | 1x/3 ans | 15 000 € (moyen.) |
-| **Contingence** | 10% | 6 500 € |
-| **TOTAL ANNUEL (2027-2029)** | | **70 000 € - 80 000 € HT/an** |
+| **Pentest applicatif** | 1x/an (re-test après évolutions) | 5 000 € - 8 000 € |
+| **Audit RGPD suivi** | 1x/2 ans | 2 000 € - 3 000 € (moyen.) |
+| **Sensibilisation** | 2 campagnes/an | 1 500 € - 2 500 € |
+| **Formation** | Selon besoins | 1 000 € - 2 000 € |
+| **Consultant ad-hoc** | Questions ponctuelles | 2 000 € - 3 000 € |
+| **Contingence** | 10% | 1 100 € - 1 800 € |
+| **TOTAL ANNUEL (2027+)** | | **12 600 € - 20 300 € HT/an** |
 
-### 5.3 Retour sur Investissement (ROI)
-
-| Bénéfice | Estimation Valeur |
-|----------|-------------------|
-| **Évitement sanctions RGPD** | Jusqu'à 20 M€ |
-| **Réduction risque cyber** | Couverture assurance cyber (prime -20 à -30%) |
-| **Conformité ISO 27001** | Argument commercial (appels d'offres) |
-| **Réduction incidents** | Coût moyen incident : 100 k€ - 500 k€ |
-| **Confiance clients** | Rétention + nouveaux contrats |
-
-**Estimation ROI :** Retour positif dès 1 incident majeur évité
+**Montée en maturité progressive :**
+- **Année 3-4** (2028-2029) : Si croissance, envisager certification ISO 27001 légère
+- **Année 5+** : Si > 50 employés, budget sécurité évolue (30-50k€/an)
 
 ---
 
-## 6. Livrables du Référent Sécurité
+## 7. Livrables Essentiels
 
-### 6.1 Documentation Gouvernance (Q1-Q3 2026)
+### 7.1 Livrables Prestataires (2026)
 
-| Document | Description | Échéance |
-|----------|-------------|----------|
-| **Politique de Sécurité SI (PSSI)** | Document cadre sécurité entreprise | Q3 2026 |
-| **Charte d'utilisation SI** | Règles usage pour collaborateurs | Q3 2026 |
-| **Politique de mots de passe** | Conformité ANSSI (12 car., complexité) | Q2 2026 |
-| **Politique télétravail / nomadisme** | Sécurisation accès distants | Q2 2026 |
-| **Politique BYOD** | Règles appareils personnels | Q3 2026 |
-| **Charte utilisation LLM** | Encadrement usages IA générative | Q2 2026 |
-| **Procédure gestion incidents** | Process de réponse incidents sécu | Q3 2026 |
-| **Plan de Continuité (PCA/PRA)** | Procédures reprise activité | Q4 2026 |
+| Livrable | Qui | Quand | Usage |
+|----------|-----|-------|-------|
+| **Rapport diagnostic sécurité** | Consultant initial | Q1 | Roadmap 3 ans, priorisation |
+| **Rapport pentest applicatif** | Pentester | Q2 | Corrections dev |
+| **Registre traitements RGPD** | Consultant RGPD | Q2 | Conformité, site web |
+| **Politique confidentialité** | Consultant RGPD | Q2 | Site web (mentions légales) |
+| **Rapports phishing** | Plateforme sensibilisation | Q3-Q4 | Mesure maturité collaborateurs |
 
-### 6.2 Documentation Audit & Pilotage
+### 7.2 Livrables Internes (À Créer avec Aide Prestataire)
 
-| Document | Description | Fréquence |
-|----------|-------------|-----------|
-| **Registre des actifs** | Inventaire SI critique | MAJ trimestrielle |
-| **Matrice des risques cyber** | Cartographie risques + traitement | MAJ annuelle |
-| **Registre traitements RGPD** | Base légale, DPO, PIA | MAJ continue |
-| **Cahiers des charges audits** | Specs techniques appels d'offres | Selon besoins |
-| **Rapports de suivi audits** | Avancement remédiation vulnérabilités | Mensuel |
-| **Tableau de bord KPI sécurité** | Indicateurs pilotage | Mensuel |
-| **Rapport sécurité Direction** | Synthèse exec. état sécurité | Trimestriel |
+| Livrable | Basé sur | Quand | Description |
+|----------|----------|-------|-------------|
+| **Politique mots de passe** | Template prestataire | Q3 | Règles simples (12 car., MFA comptes admin) |
+| **Politique télétravail** | Template prestataire | Q3 | VPN, écran verrouillé, pas de WiFi public |
+| **Politique BYOD** | Template prestataire | Q3 | Si appareils perso acceptés |
+| **Procédure incident** | Template prestataire | Q4 | Qui contacter si suspicion piratage |
 
-### 6.3 Documentation ISO 27001 (Q3-Q4 2026)
-
-*Produite avec l'accompagnement consultant ISO*
-
-- Déclaration d'Applicabilité (Statement of Applicability - SoA)
-- Procédures obligatoires (14 procédures ISO 27001:2022)
-- Registre des risques ISO
-- Plan de traitement des risques
-- Politique SMSI
-- Objectifs sécurité mesurables
+**Note :** Les prestataires doivent fournir des **templates adaptés TPE** (pas des PSSI de 50 pages).
 
 ---
 
-## 7. Indicateurs de Suivi (KPI)
+## 8. Indicateurs de Suivi
 
-### 7.1 KPI Techniques
-
-| KPI | Cible 2026 | Mesure | Fréquence |
-|-----|------------|--------|-----------|
-| **Vulnérabilités critiques détectées** | 100% corrigées < 30j | Nb vulns / Délai moyen correction | Mensuel |
-| **Vulnérabilités majeures détectées** | 100% corrigées < 90j | Nb vulns / Délai moyen correction | Mensuel |
-| **Taux couverture audits** | 100% applis critiques | % applications auditées / total | Trimestriel |
-| **Score sécurité applicatif** | Amélioration +30% | OWASP ASVS Level | Semestriel |
-| **Score sécurité AD** | Amélioration +40% | PingCastle Score | Semestriel |
-| **Conformité politique mots de passe** | 95% comptes conformes | % comptes ANSSI-compliant | Trimestriel |
-
-### 7.2 KPI Organisationnels
+### 8.1 KPI Essentiels Startup
 
 | KPI | Cible 2026 | Mesure | Fréquence |
 |-----|------------|--------|-----------|
-| **Taux sensibilisation phishing** | < 10% taux clics | % clics campagnes / nb destinataires | Trimestriel |
-| **Taux formation secure coding** | 100% développeurs | % dev formés / total | Annuel |
-| **Incidents sécurité déclarés** | 0 incidents majeurs | Nb incidents / criticité | Mensuel |
-| **Délai détection incidents** | < 24h | Temps moyen détection | Trimestriel |
-| **Taux conformité RGPD** | 90% conformité | Audit RGPD score | Semestriel |
-| **Certification ISO 27001** | Obtenue Q4 2026 | Oui / Non | Annuel |
+| **Vulnérabilités critiques** | 100% corrigées < 30j | Suivi post-pentest | Mensuel |
+| **Conformité RGPD** | Registre à jour, politique en ligne | Checklist consultant | Trimestriel |
+| **Sensibilisation phishing** | < 20% taux clics (débutant) | Campagnes | Semestriel |
+| **Formation dev** | 100% dev formés OWASP | Présence atelier | Annuel |
+| **Budget sécurité** | Dépensé dans fourchette 20-28k€ | Suivi compta | Trimestriel |
 
-### 7.3 KPI Budgétaires
+**Objectif 2027 :**
+- Taux clics phishing < 15%
+- 0 vulnérabilité critique non corrigée
 
-| KPI | Cible 2026 | Mesure | Fréquence |
-|-----|------------|--------|-----------|
-| **Budget consommé vs prévisionnel** | ±10% | Écart budget | Mensuel |
-| **Coût moyen par vulnérabilité corrigée** | Suivi tendance | Budget remédiation / nb vulns | Trimestriel |
-| **ROI programme sécurité** | Positif | Incidents évités vs coût programme | Annuel |
-
-### 7.4 Tableau de Bord Mensuel (Exemple)
+### 8.2 Tableau de Bord Simple (Exemple Fin 2026)
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│ TABLEAU DE BORD SÉCURITÉ - Septembre 2026                  │
-├─────────────────────────────────────────────────────────────┤
-│ Vulnérabilités en cours                                     │
-│   🔴 Critiques    : 2  (délai moyen: 15j)   ✅ OK          │
-│   🟠 Majeures     : 8  (délai moyen: 45j)   ✅ OK          │
-│   🟡 Mineures     : 23 (délai moyen: 120j)  ⚠️  Surveillance│
-├─────────────────────────────────────────────────────────────┤
-│ Audits 2026                                                 │
-│   ✅ Audit org.        : Terminé (Q1)                       │
-│   ✅ Audit AD          : Terminé (Q1)                       │
-│   ✅ Pentest web/API   : Terminé (Q2), Re-test Q4          │
-│   ✅ Audit RGPD        : Terminé (Q2)                       │
-│   🔄 ISO 27001         : En cours certification (Q4)        │
-├─────────────────────────────────────────────────────────────┤
-│ Sensibilisation                                             │
-│   Campagne #2 (Juin)  : 8% clics  ✅ (cible <10%)          │
-│   Formation dev       : 12/12 formés ✅                     │
-├─────────────────────────────────────────────────────────────┤
-│ Budget                                                      │
-│   Consommé : 113 700 € / 139 700 € (81%)  ✅               │
-└─────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────┐
+│ BILAN SÉCURITÉ 2026 - Startup SCPI                 │
+├─────────────────────────────────────────────────────┤
+│ ✅ Diagnostic initial réalisé (Q1)                  │
+│ ✅ Pentest applicatif terminé (Q2)                  │
+│    → 3 vulns critiques détectées, toutes corrigées │
+│    → 7 vulns majeures, 6 corrigées (1 planifiée)   │
+│ ✅ Audit RGPD terminé (Q2)                          │
+│    → Registre créé, politique en ligne             │
+│ ✅ 2 campagnes phishing (Juil + Oct)                │
+│    → Taux clics : 25% → 18%  📈 Amélioration       │
+│ ✅ Formation dev OWASP (Sept)                       │
+│    → 6/6 dev formés                                 │
+├─────────────────────────────────────────────────────┤
+│ Budget : 24 500 € / 28 000 € (88%)  ✅             │
+└─────────────────────────────────────────────────────┘
 ```
-
----
-
-## 8. Plan de Formation
-
-### 8.1 Formation Référent Sécurité
-
-**Parcours prioritaire 2026 :**
-
-| Certification | Organisme | Durée | Coût HT | Planning 2026 | Priorité |
-|---------------|-----------|-------|---------|---------------|----------|
-| **ISO 27001 Lead Implementer** | M2i Formation | 5j | 3 000 € | Q1 (Janvier) | ⭐⭐⭐⭐⭐ |
-| **CISM** | CERTyou | 5j | 4 200 € | Q2 (Avril) | ⭐⭐⭐⭐⭐ |
-| **CIPP/E** | PLB | 2j | 2 000 € | Q2 (Juin) | ⭐⭐⭐⭐⭐ |
-| **ISO 27001 Lead Auditor** | PECB | 5j | 3 500 € | Q4 (Octobre) | ⭐⭐⭐⭐⭐ |
-| **CISSP** (optionnel) | SysDream | 5j | 5 000 € | 2027 | ⭐⭐⭐⭐ |
-
-**Total formation référent 2026 : 12 700 € HT**
-
-**Bénéfices :**
-- Crédibilité vis-à-vis prestataires et direction
-- Capacité à auditer prestataires (Lead Auditor)
-- Pilotage projet ISO 27001 (Lead Implementer)
-- Expertise RGPD (CIPP/E)
-- Vision stratégique sécurité (CISM)
-
-### 8.2 Formation Équipe Développement
-
-| Formation | Contenu | Durée | Coût HT | Planning 2026 |
-|-----------|---------|-------|---------|---------------|
-| **Secure Coding (VueJS/Symfony)** | OWASP Top 10, injections SQL, XSS, CSRF, secure auth | 2j | 4 000 € | Q3 (Juillet) |
-| **API Security** | OWASP API Top 10, authentification, rate limiting | 1j | 2 500 € | 2027 |
-
-**Format :** Présentiel ou distanciel, 12 développeurs formés
-
-**Organismes recommandés :** SysDream, EduGroupe, SANS (GWEB)
 
 ---
 
 ## Résumé Exécutif
 
-### Pour la Direction
+### Pour la Direction (Startup)
 
-**Contexte :** En tant que fintech manipulant des données financières SCPI sensibles, notre exposition aux cyberrisques est critique. Un incident majeur pourrait coûter 100 k€ - 20 M€ (sanctions RGPD, pertes clients, interruption service).
+**Contexte :** En tant que startup fintech < 10 employés manipulant données financières sensibles, nous sommes exposés à des cyberrisques. Un incident majeur ou une sanction RGPD pourrait compromettre l'entreprise.
 
-**Programme 2026 :** Mise en place d'un programme de sécurité structuré avec certification ISO 27001.
+**Programme 2026 Proposé :** Approche pragmatique centrée sur l'essentiel.
 
-**Investissement 2026 :** 139 700 € HT (≈ 167 000 € TTC)
-**Investissement récurrent (2027+) :** 70 000 € - 80 000 € HT/an
+**Investissement 2026 :** 20 000 € - 28 000 € HT (24-34k€ TTC)
+**Investissement récurrent :** 13 000 € - 20 000 € HT/an (2027+)
+
+**Actions clés :**
+1. **Diagnostic initial** par consultant expérimenté → Roadmap 3 ans
+2. **Pentest applicatif** → Corrections vulnérabilités critiques
+3. **Audit RGPD** → Mise en conformité minimale
+4. **Sensibilisation équipe** → Réduire risque phishing
 
 **Bénéfices :**
-- ✅ Conformité réglementaire (RGPD, ISO 27001)
-- ✅ Réduction risque cyber (audits, remédiation vulnérabilités)
-- ✅ Argument commercial (certification ISO)
-- ✅ Confiance clients et partenaires
-- ✅ Couverture assurance cyber optimisée
+- ✅ Conformité RGPD (éviter sanctions)
+- ✅ Réduction risque piratage applications
+- ✅ Équipe sensibilisée (phishing, bonnes pratiques)
+- ✅ Roadmap claire pour croissance future
 
 **Décisions attendues :**
-1. Validation budget 2026 (140 k€)
-2. Validation roadmap trimestrielle
-3. Engagement certification ISO 27001
+1. Validation budget 20-28k€ pour 2026
+2. Validation lancement diagnostic Q1 2026
 
-**ROI :** Positif dès 1 incident majeur évité
+**ROI :** Éviter 1 seul incident cyber ou sanction RGPD rembourse largement l'investissement.
 
 ---
 
-## Prochaines Étapes
+## Prochaines Étapes (Décembre 2025 - Janvier 2026)
 
-**Décembre 2025 :**
-- [ ] Présentation roadmap à la Direction
-- [ ] Validation budget 2026
-- [ ] Identification consultant ISO 27001
-- [ ] Lancement appel d'offres audits Q1
+**Immédiat :**
+- [ ] Présenter ce document à la Direction
+- [ ] Valider budget 2026 (fourchette 20-28k€)
+- [ ] Identifier 2-3 consultants sécurité pour diagnostic initial
 
 **Janvier 2026 :**
-- [ ] Formation ISO 27001 Lead Implementer
-- [ ] Démarrage audit organisationnel
-- [ ] Démarrage audit AD
-- [ ] Kick-off projet avec CTO
+- [ ] Lancer appel d'offres diagnostic (3 devis)
+- [ ] Sélection prestataire (critères : expérience startup, tarif, références)
+- [ ] Démarrage diagnostic (fin janvier / début février)
+
+**Février-Mars 2026 :**
+- [ ] Réception rapport diagnostic
+- [ ] Présentation résultats + roadmap à l'équipe
+- [ ] Validation audits Q2 (pentest + RGPD)
 
 ---
 
 **Document validé par :** ________________
 **Date :** ___/___/2026
 
-**Version :** 1.0
-**Prochaine révision :** Trimestrielle (après chaque phase)
+**Version :** 2.0 (Adaptée startup < 10 employés)
+**Prochaine révision :** Post-diagnostic (Mars 2026)
