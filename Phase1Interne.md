@@ -38,20 +38,10 @@
 
 #### ✔ Actions à réaliser
 
-* [ ] Construire une **liste de prestataires potentiels** (voir ci-dessous)
-* [ ] Vérifier leurs compétences
-    * [ ] Expérience ISO 27005 / 27001
-    * [ ] Références fintech / SaaS
-    * [ ] Certifications (CISSP, ISO Lead Auditor, OSCP…)
-* [ ] Leur envoyer un **email type** (voir plus bas)
-* [ ] Récupérer devis + méthode proposée
-* [ ] Comparer selon une grille simple :
-    * [ ] Prix
-    * [ ] Méthodologie
-    * [ ] Délais
-    * [ ] Pertinence secteur
-    * [ ] Clarté des livrables
-    * [ ] Relation humaine / disponibilité
+Aggrémenter la liste des prestataire : 
+- Fiche pour le moment trop complexe (à simplifier)
+- Essayer d'avoir des informations de contact pertinent
+- https://docs.google.com/spreadsheets/d/1e01Ogh2e8VDH63oRNChUTJLMA_LD_du_mVX8sJuLfaU/edit?gid=0#gid=0
 
 #### ⏱️ Durée : 2 à 4 jours
 
@@ -61,7 +51,17 @@
 
 ### 🎯 Objectif : choisir, finaliser, encadrer juridiquement.
 
-#### ✔ Actions à réaliser
+#### Phase 1
+* Valider le template de mail et le cahier des charge synthetique
+* Transmission préfiltre ChatGPT 
+    * Créer un projet ChatGPT avec les information du tableau à compléter (Critères).
+    * Créer une conversation ChatGPT pour chaque prestataire dans le quel on mettra le resultat des échanges
+
+#### Phase 2
+- Faire un version exhaustive du cahier des charges
+- Transmettre aux presta retenu avec lien calendly pour un rdv d'1 heure
+
+### ✔ Actions à réaliser
 
 * [ ] Organiser un call court avec les 2 meilleurs prestataires
 * [ ] Poser les questions critiques :

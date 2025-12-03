@@ -2,6 +2,8 @@
 
 ## 🟦 **1. Avant le choix du prestataire**
 
+[Document d'étude](Phase1_1.md)
+
 C'est une étape qu'on doit faire en interne pour démarcher les prestataires.
 Probablement mené par moi.
 
@@ -25,7 +27,7 @@ Probablement mené par moi.
 
 ## 🟩 **2. Mission du prestataire (ISO 27005)**
 
-[Process habituels des prestataires](WorkflowProcessHabituels.md)
+[Process habituels des prestataires](Phase2_WorkflowProcessHabituels.md)
 
 5. **Analyse de risques ISO 27005 complète**
 
@@ -43,37 +45,19 @@ Probablement mené par moi.
 
 ---
 
-## 🟧 **3. Après ISO 27005 (interne + parfois prestataire)**
+## 🟧 **3. Application et mise en conformité (collaboration : interne + prestataire)**
 
-(*application et mise en conformité*)
-
-7. **Mise en œuvre des mesures (ISO 27002)**
+7. **Mise en œuvre des mesures**
    → MFA, CI/CD, chiffrement laptop, politique LLM, logs, prestataires, etc.
    Durée : **1 à 6 mois** selon amplitude
 
 8. **Changements organisationnels**
-   → procédures internes (télétravail, accès, gestion incidents), sensibilisation.
+   → procédures internes (télétravail, accès, gestion incidents, ...), sensibilisation.
    Durée : **1 à 2 mois**
 
 9. **Audits réguliers**
    → pentests, audits infra, audits RGPD, revues annuelles.
    Fréquence : **annuel**
-
----
-
-# 🧩 **Synthèse ultra simple pour ton document**
-
-## **Phase 1 — Préparation & choix prestataire**
-
-Définir les besoins → cahier des charges → comparaison → sélection.
-
-## **Phase 2 — Analyse ISO 27005 (mission externe)**
-
-Réalisation technique de l’analyse de risques + plan d’action.
-
-## **Phase 3 — Mise en conformité & amélioration continue**
-
-Appliquer les mesures, mettre en place les procédures, audits réguliers.
 
 ---
 

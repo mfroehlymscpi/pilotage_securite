@@ -4,6 +4,13 @@
 Voici **la version courte**, uniquement les **9 grandes étapes**, avec **durée moyenne** :
 
 ---
+Documentation : 
+* [ISO prioritaires](IsoPrioritaires.md)
+* [Lsite des ISO officiels pertinents](IsoPertinents.md)
+* [Exemple ISO 27005](Demo27005.md)
+* [📞 Contacts & Ressources](Phase2_Contacts.md)
+
+--- 
 
 ### ✅ **Workflow ISO 27005 — Version Résumée (+ durées)**
 1. **Cadrage du périmètre**
