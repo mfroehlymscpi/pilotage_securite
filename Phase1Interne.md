@@ -1,4 +1,4 @@
-# ✅ **TODO — Phase 1 : Avant le choix du prestataire**
+# **Phase 1 : Avant le choix du prestataire**
 
 *(À réaliser en interne)*
 
@@ -9,19 +9,14 @@
 ### 🎯 Objectif : formaliser ce qu’on veut sécuriser et pourquoi.
 
 #### ✔ Actions à réaliser
+Élements à compléter dans les tableaux type :
+[Tableau type à compléter](Phase1_1.md)
 
 * [ ] Lister les applications concernées
-  (Monujo client, Monujo admin, API SCPI, backend Symfony, mobile Capacitor…)
 * [ ] Lister les données sensibles manipulées
-  (données clients, SCPI, transactions ISR, documents justificatifs…)
 * [ ] Lister les environnements
-  (prod, staging, CI/CD, postes dev, télétravail…)
 * [ ] Lister les services tiers/SaaS
-  (Google, GitHub, Dashlane, Datakeen, SMS provider, LLM…)
-* [ ] Déterminer le périmètre exact de l’analyse ISO 27005
-  → “Ce périmètre sera fourni aux prestataires lors de la demande de devis.”
-
-[Tableau type à compléter](Phase1_1.md)
+* [ ] Déterminer le périmètre exact de l’analyse ISO 27005 ou autre
 
 #### ⏱️ Durée : 0,5 à 1 jour
 
@@ -33,23 +28,7 @@
 
 #### ✔ Actions à réaliser
 
-* [ ] Écrire un **cahier des charges synthétique** spécifiant les **livrables attendus du prestataire** :
-    * [ ] **Analyse de risques complète ISO 27005**
-    * [ ] **Registre des actifs** : inventaire exhaustif (applications, données, infrastructures, services tiers)
-    * [ ] **Catalogue des menaces** : menaces pertinentes pour notre secteur (fintech/SCPI)
-    * [ ] **Liste des vulnérabilités** : techniques et organisationnelles identifiées
-    * [ ] **Scénarios de risques** : scénarios d'attaque et impacts métier
-    * [ ] **Matrice de risques** : probabilité × impact avec cotation claire
-    * [ ] **Plan de traitement des risques** : mesures priorisées par criticité et faisabilité
-    * [ ] **Recommandations ISO 27002** : mapping des contrôles applicables
-    * [ ] **Feuille de route sécurité 12 mois** : planning d'implémentation des mesures
-    * [ ] **Restitution orale** : présentation des résultats à la direction + équipe technique
-
-* [ ] Ajouter les **contraintes méthodologiques** :
-    * [ ] **Pas d'exécution technique** : analyse de gouvernance uniquement (pas de pentest, pas de scan)
-    * [ ] **Prise en compte du secteur** : fintech / SCPI / données financières / RGPD
-    * [ ] **Technologies modernes** : analyse incluant LLM, API REST, services SaaS
-    * [ ] **Format des livrables** : rapport détaillé (PDF) + fichiers de travail (Excel/CSV pour matrices)
+* [ ] Compléter et valider le [Cahier des Charges — Accompagnement Sécurité & Analyse des Risques](Phase1_2_cahier_des_charges.md)
 
 ---
 
