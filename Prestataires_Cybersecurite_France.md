@@ -2,22 +2,31 @@
 
 ## Prestataires Pentest & Audit Applicatif
 
-| Prestataire | Site Web | OSWE | OSCP | GWEB | eWPTX | PASSI ANSSI | Coût Pentest Web | Notes |
-|-------------|----------|------|------|------|-------|-------------|------------------|-------|
-| **Vaadata** | [vaadata.com](https://www.vaadata.com) | ✅ | ✅ | ❓ | ✅ | ❓ | 1 200 € - 6 500 € | Tests intrusion et audits sécurité web/mobile |
-| **Connect3S** | [pentest-nice.fr](https://www.pentest-nice.fr) | ✅ | ✅ | ✅ | ❓ | ❓ | Sur devis | Pentest à distance, expertise CEH/OSCP/OSWE/GWAPT |
-| **SSHack** | [sshack.me](https://sshack.me) | ❓ | ✅ | ❓ | ❓ | ❓ | Sur devis | Experts OSCP/OSEP, pentest web & infra |
-| **Intuity** | [intuity.fr](https://intuity.fr/pentest) | ❓ | ✅ | ❓ | ❓ | ❓ | Sur devis | Label France Cybersecurity 2022, pentesters OSCP |
-| **AlgoSecure** | [algosecure.fr](https://www.algosecure.fr) | ❓ | ❓ | ❓ | ❓ | ❓ | Sur devis | Audit sécurité & pentest, tests d'intrusion |
-| **CAEIRUS** | [caeirus.com](https://www.caeirus.com) | ❓ | ❓ | ❓ | ❓ | ❓ | Sur devis | Audit web, code, blockchain (ANSSI, OWASP, NIST) |
-| **SysDream** | [sysdream.com](https://sysdream.com) | ✅ | ✅ | ✅ | ✅ | ✅ | Sur devis | **PASSI & PDIS ANSSI**, Qualiopi, 60+ experts, 20 ans exp. |
-| **Wavestone** | [wavestone.com](https://www.wavestone.com/fr/nos-expertises/cybersecurite/) | ✅ | ✅ | ✅ | ❓ | ✅ | Sur devis | **PASSI & PRIS ANSSI**, Cabinet conseil 20+ ans |
-| **Akyl** | [akyl.fr](https://www.akyl.fr) | ❓ | ❓ | ❓ | ❓ | ❓ | 3 000 € - 50 000 €+ | 100% français, approche 360° cybersécurité |
+| Prestataire | Site Web | OSWE | OSCP | GWEB | eWPTX | PASSI ANSSI | TJM estimé | Coût Pentest Web (5j) | Notes |
+|-------------|----------|------|------|------|-------|-------------|------------|----------------------|-------|
+| **Vaadata** | [vaadata.com](https://www.vaadata.com) | ✅ | ✅ | ❓ | ✅ | ❓ | 600-900 € | 1 200 € - 6 500 € | Tests intrusion, audits web/mobile |
+| **Connect3S** | [pentest-nice.fr](https://www.pentest-nice.fr) | ✅ | ✅ | ✅ | ❓ | ❓ | 700-950 € | 3 500 € - 5 000 € | Pentest à distance, CEH/OSCP/OSWE/GWAPT |
+| **SSHack** | [sshack.me](https://sshack.me) | ❓ | ✅ | ❓ | ❓ | ❓ | 700-900 € | 3 500 € - 4 500 € | Experts OSCP/OSEP, pentest web & infra |
+| **Intuity** | [intuity.fr](https://intuity.fr/pentest) | ❓ | ✅ | ❓ | ❓ | ❓ | 650-850 € | 3 200 € - 4 200 € | Label France Cybersecurity 2022 |
+| **AlgoSecure** | [algosecure.fr](https://www.algosecure.fr) | ❓ | ❓ | ❓ | ❓ | ❓ | 600-850 € | 3 000 € - 4 200 € | Lyon/Paris, audit & pentest |
+| **CAEIRUS** | [caeirus.com](https://www.caeirus.com) | ❓ | ❓ | ❓ | ❓ | ❓ | 700-900 € | 3 500 € - 4 500 € | Méthodologie ANSSI, OWASP, NIST |
+| **SysDream** | [sysdream.com](https://sysdream.com) | ✅ | ✅ | ✅ | ✅ | ✅ | 950-1 200 € | 4 750 € - 6 000 € | **PASSI ANSSI**, 60+ experts, 20 ans |
+| **Wavestone** | [wavestone.com](https://www.wavestone.com/fr/nos-expertises/cybersecurite/) | ✅ | ✅ | ✅ | ❓ | ✅ | 1 000-1 500 € | 5 000 € - 7 500 € | **PASSI ANSSI**, Cabinet conseil majeur |
+| **Akyl** | [akyl.fr](https://www.akyl.fr) | ❓ | ❓ | ❓ | ❓ | ❓ | 600-900 € | 3 000 € - 50 000 € | 100% français, approche 360° |
 
 **Légende :**
 - ✅ Confirmé (certifications détenues par les équipes)
 - ❓ Information non confirmée publiquement (à vérifier lors de l'appel d'offres)
 - 🏆 PASSI ANSSI = Qualification officielle prestataire audit SSI (gage de qualité)
+
+**Sources :**
+- https://www.codeur.com/consultant/securite/tarif
+- https://www.free-work.com/fr/tech-it/consultant-cyber-securite/rate-tjm-freelance
+- https://www.malt.fr/t/barometre-tarifs/tech/expert-cybersecurite
+- https://www.oteria.fr/blog-oteria/cybersecurite-salaires-2025--guide-complet
+- https://deefense.fr/cyber-et-it/tarifs-cybersecurite-pour-pme
+- https://www.vaadata.com/en/rates-pentest/
+- https://www.akyl.fr/article/combien-coute-un-test-dintrusion-pentest-analyse-des-facteurs-de-prix
 
 ---
 
@@ -178,3 +187,60 @@
 **Plateformes Bug Bounty :**
 - [YesWeHack](https://www.yeswehack.com)
 - [Yogosha](https://yogosha.com/)
+
+**Tarifs et TJM :**
+- [Codeur - Tarif consultant cybersécurité](https://www.codeur.com/consultant/securite/tarif)
+- [Free-Work - TJM Consultant cybersécurité](https://www.free-work.com/fr/tech-it/consultant-cyber-securite/rate-tjm-freelance)
+- [Malt - Grille tarifs 2025 experts cybersécurité](https://www.malt.fr/t/barometre-tarifs/tech/expert-cybersecurite)
+- [Oteria - Salaires Cybersécurité 2025](https://www.oteria.fr/blog-oteria/cybersecurite-salaires-2025--guide-complet)
+- [Deefense - Tarifs cybersécurité PME](https://deefense.fr/cyber-et-it/tarifs-cybersecurite-pour-pme)
+
+---
+
+## 💰 Grille Tarifaire Détaillée - TJM Marché France 2025
+
+### Taux Journalier Moyen (TJM) par Niveau d'Expertise
+
+| Niveau | TJM | Profil type | Certifications |
+|--------|-----|-------------|----------------|
+| **Junior** | 300-450 € | 0-2 ans d'expérience, junior pentest | CEH, eJPT |
+| **Confirmé** | 500-700 € | 2-5 ans, pentest confirmé | OSCP, CEH, GPEN |
+| **Senior** | 700-950 € | 5-10 ans, expert technique | OSCP, OSWE, GWAPT |
+| **Expert** | 950-1 200 € | 10+ ans, certifications multiples | OSWE, OSEP, GWEB, eWPTX |
+| **Architecte/Lead** | 1 200-1 500 € | 15+ ans, pilotage audits complexes | OSWE + CISSP/CISM |
+
+**Moyenne marché 2025 :** 697 € / jour (tous niveaux confondus)
+
+### Facteurs de Variation des Tarifs
+
+| Facteur | Impact sur TJM |
+|---------|---------------|
+| **Qualification PASSI ANSSI** | +20 à 30% |
+| **Certifications OSWE/GWEB/eWPTX** | +15 à 25% |
+| **Secteur réglementé (finance, santé)** | +10 à 20% |
+| **Urgence mission (< 2 semaines)** | +15 à 30% |
+| **Durée mission courte (< 5 jours)** | +10 à 15% |
+| **Tests en production / hors heures** | +20 à 40% |
+| **Support post-audit inclus (3-6 mois)** | +10 à 15% |
+
+### Estimations TJM par Prestataire (Basé sur Qualifications)
+
+**Pourquoi ces estimations ?**
+
+| Type prestataire | TJM estimé | Justification |
+|-----------------|------------|---------------|
+| **PME / Freelances** (AlgoSecure, SSHack, Intuity) | 600-900 € | Structure légère, experts seniors OSCP |
+| **Cabinets spécialisés** (Vaadata, Connect3S, CAEIRUS) | 650-950 € | Certifications multiples, méthodologie |
+| **Cabinets qualifiés** (SysDream - PASSI) | 950-1 200 € | PASSI ANSSI, 20 ans exp., experts OSWE |
+| **Majors conseil** (Wavestone - PASSI) | 1 000-1 500 € | PASSI ANSSI, cabinet majeur, contrats État |
+
+**Note importante :** Ces TJM sont des **estimations indicatives** basées sur :
+1. Les grilles tarifaires moyennes du marché français 2025
+2. Les qualifications et certifications des prestataires
+3. Les retours d'expérience du secteur
+
+**Pour obtenir des tarifs précis**, il est impératif de demander des devis détaillés à chaque prestataire en précisant :
+- Le périmètre exact de l'audit (nombre d'applications, endpoints API, etc.)
+- La méthodologie souhaitée (black box, grey box, white box)
+- Les délais requis
+- Le support post-audit attendu
