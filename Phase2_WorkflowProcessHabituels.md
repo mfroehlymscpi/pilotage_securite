@@ -1,10 +1,7 @@
 # Workflow habituel
 
-## Résumé
-Voici **la version courte**, uniquement les **9 grandes étapes**, avec **durée moyenne** :
+## Documentation : 
 
----
-Documentation : 
 * [ISO prioritaires](IsoPrioritaires.md)
 * [Lsite des ISO officiels pertinents](IsoPertinents.md)
 * [Exemple ISO 27005](Demo27005.md)

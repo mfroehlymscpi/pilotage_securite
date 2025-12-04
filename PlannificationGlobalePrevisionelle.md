@@ -1,5 +1,9 @@
 # ✅ **Workflow global — Pilotage Sécurité (vue d’ensemble)**
 
+## Schema global de la mission
+![Schema du projet bglobal](./procedure_standard.png)
+
+
 ## 🟦 **1. Préparation et choix du prestataire**
 
 
