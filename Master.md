@@ -2,6 +2,10 @@
 
 **MeilleureSCPI.com — 2025**
 
+# Sommaire 
+
+[TOC]
+
 ---
 
 ## **1. Contexte & Objectifs**
@@ -46,54 +50,82 @@ Cela permet :
 * de filtrer rapidement les prestataires non adaptés,
 * d’ajuster ensuite notre périmètre théorique.
 
+Plan Global : 
+* Campagne de mail à tous les prestataires
+* Demander à un LLM de remplire d'extraire les informations selon les critères qu'on a défini dans le sheet de suivi
+* Éliminer un max à cette étape => Rester sur 3 à 5 presta
+* Faire une visio avec ceux-ci pour n'en sélectionner finalement qu'un
+
 ---
 
 ## **3.2 Mail type à envoyer**
 
-*(La section suivante est laissée inchangée mais présentée proprement.)*
+On pourrais prévoir une deadline ?
 
 ```markdown
-# Objet : Demande d’information – Accompagnement Sécurité & Analyse des Risques
+# ✉️ **Objet : Demande d’information – Accompagnement Sécurité & Analyse des Risques**
 
 Bonjour,
 
-Je vous contacte dans le cadre d’un projet d’amélioration de la sécurité au sein de MeilleureSCPI.com, société fintech spécialisée dans les données et investissements SCPI.
+Je vous contacte dans le cadre d’un projet d’amélioration de la sécurité au sein de **MeilleureSCPI.com**, fintech spécialisée dans la donnée immobilière et les investissements SCPI.
 
 Nous recherchons un prestataire capable de nous accompagner sur :
 
-• une analyse des risques complète de notre système d’information,  
-• la proposition d’une méthodologie adaptée (à votre choix),  
-• la fourniture d’un plan d’action priorisé et actionnable,  
-• un accompagnement à la mise en œuvre des mesures retenues  
-  (nous ne recherchons pas un simple audit documentaire).
+* une **analyse des risques complète** de notre système d’information,
+* la **proposition d’une méthodologie adaptée** (ISO 27005, EBIOS RM ou hybride),
+* la **production d’un plan d’action priorisé et opérationnel**,
+* un **accompagnement** à la mise en œuvre des mesures retenues
+  *(nous ne recherchons pas un simple audit documentaire)*.
 
-Vous trouverez ci-joint un cahier des charges synthétique présentant notre contexte et nos attentes.
+## **Périmètre concerné**
 
-## Informations attendues dans un premier retour
+* applications web (VueJS),
+* API / backend Symfony,
+* services SaaS utilisés,
+* données manipulées,
+* organisation interne.
 
-1. Votre compréhension du besoin  
-2. Votre méthodologie (ISO 27005, EBIOS RM, interne, hybride…)  
-3. Vos livrables habituels  
-4. Votre capacité d’accompagnement  
-5. Certifications & compétences  
-6. Références PME / Fintech / SaaS  
-7. Estimation du périmètre optimal  
-8. Contraintes éventuelles  
+Le périmètre final sera affiné lors du cadrage.
 
-## Informations importantes
+## **Livrables attendus**
 
-• L'analyse initiale se fait uniquement sur votre réponse écrite.  
-• Les prestataires retenus auront un échange visio de 30–45 min.  
-• Le devis sera demandé seulement après validation du périmètre final.  
-• Toute information non fournie sera considérée comme non fournie.
+1. Inventaire des actifs
+2. Analyse menaces / vulnérabilités
+3. Évaluation des risques
+4. Plan d’action priorisé
+5. Accompagnement et ateliers
+6. Synthèse exécutive
+7. Restitution orale
 
-## Étapes suivantes
+## **Exigences minimales**
 
-1. Analyse de votre réponse  
-2. Sélection de 2–3 prestataires  
-3. Finalisation du périmètre  
-4. Demande de devis  
-5. Sélection finale
+* Au moins une certification : ISO 27001 Lead Implementer / Lead Auditor, CISSP, CISM, EBIOS RM ou équivalent.
+* Capacité d’accompagnement concret (recommandations, ateliers, support post-analyse).
+
+## **Informations attendues dans votre réponse**
+
+1. Votre compréhension du besoin
+2. Votre méthodologie
+3. Vos livrables habituels
+4. Votre capacité d’accompagnement
+5. Certifications & compétences de l’équipe
+6. Références (PME, SaaS, fintech)
+7. Estimation du périmètre optimal
+8. **Une indication budgétaire prévisionnelle** :
+
+    * votre **TJM**,
+    * et/ou une **fourchette indicative** pour une mission similaire
+      *(aucun devis formel n’est requis à cette étape)*
+9. Contraintes éventuelles
+
+## **Processus de sélection**
+
+1. Analyse de votre réponse
+2. Sélection de 2–3 prestataires
+3. Échange visio (30–45 min)
+4. Validation du périmètre final
+5. Demande de devis
+6. Sélection finale
 
 Merci pour votre retour.
 ```
@@ -115,6 +147,8 @@ Merci pour votre retour.
 
 ## **3.4 Grille de comparaison**
 
+### Version simplifiée (Grandes catégories)
+
 | Critère                 | Prestataire A | Prestataire B | Prestataire C |
 | ----------------------- | ------------- | ------------- | ------------- |
 | Compréhension du besoin |               |               |               |
@@ -126,94 +160,18 @@ Merci pour votre retour.
 | Disponibilité           |               |               |               |
 | Budget indicatif        |               |               |               |
 
+### [Version plus exhaustive](https://docs.google.com/spreadsheets/d/1e01Ogh2e8VDH63oRNChUTJLMA_LD_du_mVX8sJuLfaU/edit?gid=0#gid=0)
+
+C'est une première version qu'on pourras adapter.
+
 **Durée totale estimée : 1 semaine (cohérent avec planning T1).**
 
 ---
 
-# **4. Cahier des Charges — Accompagnement Sécurité & Analyse des Risques**
 
-## **4.1 Objectif**
+# **4. Périmètre préliminaire (à affiner avec le presta)**
 
-Le prestataire devra :
 
-* réaliser une analyse des risques complète,
-* proposer une méthodologie adaptée,
-* fournir un plan d’action priorisé et actionnable,
-* accompagner la mise en œuvre des mesures retenues.
-
----
-
-## **4.2 Périmètre**
-
-Inclut :
-
-* applications web (VueJS),
-* API / backend Symfony,
-* services SaaS,
-* données manipulées,
-* organisation interne.
-
-⚠️ **Le périmètre final sera ajusté lors du cadrage.**
-
----
-
-## **4.3 Livrables minimum attendus**
-
-1. Inventaire des actifs
-2. Analyse menaces / vulnérabilités
-3. Analyse & évaluation des risques
-4. Plan d’action priorisé
-5. Accompagnement
-6. Synthèse exécutive
-7. Restitution orale
-
----
-
-## **4.4 Exigences minimales**
-
-### Certifications (≥ 1)
-
-* ISO 27001 Lead Implementer
-* ISO 27001 Lead Auditor
-* CISSP
-* CISM
-* EBIOS RM
-* ou équivalent
-
-### Exigences d’accompagnement
-
-* recommandations concrètes
-* guidance / ateliers
-* support post-analyse
-* aide à la montée en maturité
-
----
-
-## **4.5 Critères de sélection**
-
-* Certifications
-* Méthodologie
-* Livrables
-* Accompagnement
-* Références
-* Disponibilité
-* Budget
-
----
-
-## **4.6 Réponse attendue**
-
-* méthodologie
-* livrables
-* accompagnement
-* planning
-* équipe
-* références
-* devis
-
----
-
-# **5. Périmètre préliminaire (à affiner)**
 
 1. Code & Données
 2. Applications Web & API
@@ -225,43 +183,83 @@ Inclut :
 
 ---
 
-# **6. Process interne — Phase 1**
+# **5. Phase 1 — Préparation interne**
 
-## **6.1 Finaliser le document de projet**
+Objectif : préparer un dossier complet permettant d’interroger les prestataires et de lancer la mission en Phase 2.
 
-Durée : **0,5 à 1 jour**
+## **5.1 Finalisation du document de projet**
+**Durée : 0,5 à 1 jour**  
+• Consolidation du contexte, objectifs et planning  
+• Validation interne (direction + technique)
 
-## **6.2 Définir le besoin détaillé & périmètre préliminaire**
-
-Durée : **0,5 à 1 jour**
-
-## **6.3 Créer un cahier des charges détaillé**
-
-Durée : **1 jour**
-
-## **6.4 Sélection finale & contractualisation**
-
-Durée : **1 à 3 jours**
-
-✔ Toutes les durées sont cohérentes avec le planning T1.
+**Livrable :** Document “Pilotage Sécurité — v1”
 
 ---
 
-# **7. Phase 2 — Mission du prestataire (ISO 27005)**
+## **5.2 Définition du besoin détaillé & périmètre préliminaire**
+**Durée : 0,5 à 1 jour**  
+• Définir les blocs analysés (applis, API, SaaS, données, organisation)  
+• Lister les zones hors scope potentiels  
+• Récolter les premiers éléments internes nécessaires au prestataire
+
+**Livrable :** Périmètre préliminaire (version non figée)
+
+---
+
+## **5.3 Rédaction du cahier des charges**
+**Durée : 1 jour**  
+• Compilation du besoin  
+• Formulation des livrables attendus  
+• Critères de sélection  
+• Contraintes, méthodologies acceptées, planning prévisionnel  
+• Exigences minimales (certifications, accompagnement, etc.)
+
+**Livrable :** Cahier des Charges (CDC) envoyé aux prestataires
+
+---
+
+## **5.4 Sélection finale & contractualisation**
+**Durée : 1 à 3 jours**
+
+### **5.4.1 Analyse des réponses et short-list**
+• Analyse des retours écrits  
+• Évaluation (grille de critères)  
+• Sélection de 2–3 prestataires pour visio
+
+### **5.4.2 Échanges de cadrage**
+• Visio 30–45 min  
+• Ajustement du périmètre  
+• Validation de la méthodologie
+
+### **5.4.3 Devis & contractualisation**
+• Réception des devis  
+• Comparaison technique + budget  
+• Sélection finale  
+• Signature du devis / contrat
+
+**Livrables :**  
+• Short-list  
+• Devis validé  
+• Prestataire retenu
+
+
+---
+
+# **6. Phase 2 — Mission du prestataire (ISO 27005)**
 
 Durée estimée : **6 à 13 jours**
-✔ Cohérent avec planning T2 (3 à 6 semaines).
+✔ Cohérent avec planning T2 (3 à 6 semaines) (Dépend principalement du prestataire).
 
 ## **Workflow résumé**
 
-1. Cadrage
-2. Inventaire actifs
-3. Menaces
-4. Vulnérabilités
+1. Cadrage (Réunion avec eux pour dire ce qu'on veut et voir ce qui est faisable avec le budget)
+2. Inventaire actifs (Ils devrons répertorier tous les "actifs" (laptop, locaux, services externes : google, universign...))
+3. Menaces (Pour chaque actif identifier les menace potentielles)
+4. Vulnérabilités (Pour chaque menace voir si on y est vulnérable)
 5. Scénarios
 6. Matrice
 7. Plan d’action
-8. ISO 27002
+8. ISO 27002 (une liste des mesures qu'on doit mettre en place)
 9. Rapport final
 
 ## **Workflow détaillé**
@@ -270,10 +268,10 @@ Durée estimée : **6 à 13 jours**
 
 ---
 
-# **8. Phase 3 — Mise en œuvre**
+# **7. Phase 3 — Mise en œuvre**
 
 Durée estimée : **1 à 6 mois**
-✔ Cohérent avec planning T3.
+(Dépendra principalement du retour du prestataire et des ressources allouées à la mise en oeuvre)
 
 Actions possibles :
 
@@ -289,89 +287,190 @@ Audits récurrents : pentest, infra, RGPD, phishing.
 
 ---
 
-# **9. Phase 4 — Organisme certificateur & Audit officiel**
-
-Durées vérifiées et cohérentes :
+# **8. Phase 4 — Organisme certificateur & Audit officiel**
 
 * Phase 1 audit : **1–2 jours**
 * Phase 2 audit : **2–5 jours**
 
-Planning T4 utilise octobre–novembre : cohérent.
-
 ---
 
-## **9.1 Objectifs**
+## **8.1 Objectifs**
 
 * choisir organisme
 * comprendre méthode
 * planifier audit ISO
 
-## **9.2 Organismes certifiants**
+## **8.2 Organismes certifiants**
 
 (AFNR, BSI, Bureau Veritas, SGS, PECB)
 
-## **9.3 Étapes de l’audit ISO 27001**
+## **8.3 Étapes de l’audit ISO 27001**
 
 1. **Phase 1 documentaire** — 1 à 2 jours
 2. **Phase 2 opérationnelle** — 2 à 5 jours
 3. **Certification** (optionnelle)
 
-## **9.4 Coûts**
-
-✔ Tous les montants cohérents avec le marché.
+## **8.4 Coûts**
 
 ---
 
-# **10. Phase 5 — Maintien en Conditions de Sécurité (MCS)**
+# **9. Phase 5 — Maintien en Conditions de Sécurité (MCS)**
 
 Actions annuelles + cycle PDCA.
 
-Durées cohérentes.
+---
+
+# **10. Budget global**
+
+## 10.1 Cohérence du budget
+
+Les montants présentés ci-dessous sont **cohérents uniquement dans le cadre d’un périmètre typique de PME SaaS / fintech**, comprenant :
+
+* 1 application web (VueJS),
+* 1 backend/API (Symfony),
+* 10–20 services SaaS critiques (Google Workspace, GitHub, Dashlane, Datakeen…),
+* une dizaine d’utilisateurs internes,
+* un fonctionnement hybride (télétravail + coworking),
+* aucune infrastructure on-premise complexe,
+* un volume d’actifs raisonnable (50–150 actifs ISO 27005).
+
+Ces chiffres supposent également :
+
+* un SI **déjà fonctionnel**, mais **pas encore structuré** au niveau sécurité,
+* quelques bonnes pratiques déjà en place (MFA partiel, GitHub, CI/CD existant),
+* une volonté d’appliquer **une ISO 27001 light**, pas une industrialisation complète,
+* des mesures techniques **simples à moyennes** à mettre en place en Phase 3.
+
+### 🔥 **Pourquoi les coûts peuvent varier (et parfois doubler)**
+
+Les budgets dépendent **directement** :
+
+#### 1. **Du périmètre retenu**
+
+Plus il y a d’actifs, de SaaS, d’applications, d’équipes ou de flux métiers,
+→ plus l’analyse ISO 27005 est longue
+→ plus le plan d’action ISO 27002 est dense
+→ plus la mise en œuvre (Phase 3) coûte cher.
+
+#### 2. **Du nombre d’actifs à analyser (ISO 27005)**
+
+* Une petite structure : **30–80 actifs**
+* Une PME SaaS normale : **80–150 actifs**
+* Une organisation complexe : **200–500 actifs**
+
+> Le volume d’actifs impacte *massivement* la durée de la Phase 2.
+
+#### 3. **De l’état actuel de la sécurité**
+
+Quelques exemples :
+
+| Si aujourd’hui…          | Alors la Phase 3 sera… |
+| ------------------------ | ---------------------- |
+| MFA absent               | +2 à 5 jours internes  |
+| CI/CD basique            | +3 à 7 jours           |
+| Gestion accès floue      | +3 à 10 jours          |
+| Sauvegardes non auditées | +2 à 6 jours           |
+| SaaS non maîtrisés       | +2 à 8 jours           |
+
+Si vous êtes déjà matures → coûts plus bas.
+Si vous partez de zéro → coûts plus hauts.
+
+#### 4. **Des mesures à mettre en œuvre (Phase 3)**
+
+Les coûts varient selon la profondeur des travaux :
+
+* mesures simples (MFA, durcissement, monitoring, doc) → bas de fourchette
+* mesures complexes (refonte CI/CD, IAM, segmentation, PRA) → haut de fourchette
+
+#### 5. **Du niveau d’ambition ISO 27001**
+
+Il existe 3 niveaux de mise en conformité :
+
+| Niveau                         | Objectif                                  | Coût  |
+| ------------------------------ | ----------------------------------------- | ----- |
+| **Light (PME SaaS)**           | structuration SMSI, risques, mesures clés | Bas   |
+| **Standard (PME 50–200 pers)** | mise en conformité solide                 | Moyen |
+| **Certification complète**     | conformité + preuves + audit officiel     | Haut  |
+
 
 ---
 
-# **11. Budget global (hors interne)**
+##  **10.2 Budget prévisionnel par phase**
 
-Tous les montants cohérents avec les phases :
+| Phase                         | Coût                |
+|-------------------------------| ------------------- |
+| Phase 0                       | 0 €                 |
+| Phase 2                       | 8 000 – 15 000 €    |
+| Phase 3                       | 2 000 – 12 000 €    |
+| Phase 4 (Sans certification) | 4 500 – 12 000 €    |
+| Phase 4 (Avec certification) | 9 500 – 25 000 €    |
+| Phase 5 (Sans certification)  | 5 000 – 12 000 €/an |
+| Phase 5 (Avec certification)  | 7 000 – 15 000 €/an |
 
-| Phase             | Coût                |
-| ----------------- | ------------------- |
-| Phase 0           | 0 €                 |
-| Phase 2           | 8 000 – 15 000 €    |
-| Phase 3           | 2 000 – 12 000 €    |
-| Phase 4A          | 4 500 – 12 000 €    |
-| Phase 4B          | 9 500 – 25 000 €    |
-| Phase 5           | 5 000 – 12 000 €/an |
-| Phase 5 certifiée | 7 000 – 15 000 €/an |
+
+##  **10.3 Budget prévisionnel *avec certification ISO 27001***
+| **Phase**                                       | **À qui ?**                     | **Coût estimé**           | **Charge interne estimée** |
+|-------------------------------------------------|---------------------------------|---------------------------|-----------------------------|
+| Phase 0                                         | Interne                         | **0 €**                   | **2 à 4 j.h**               |
+| Phase 2 — Analyse des risques                   | Prestataire sécurité            | **8 000 – 15 000 €**      | **5 à 10 j.h**              |
+| Phase 3 — Mise en œuvre                         | Prestataire sécurité            | **2 000 – 12 000 €**      | **10 à 25 j.h**             |
+| Phase 4 — Pré-audit / préparation certification | Prestataire sécurité            | **9 500 – 25 000 €**      | **5 à 12 j.h**              |
+| **Total Année 1 (avec certification, hors audit officiel)** | **Prestataire uniquement** | **19 500 € – 52 000 €** | **22 à 51 j.h internes**   |
+|                                                 |                                 |                           |                             |
+| Phase 5 — Maintien SMSI certifié (support)      | Prestataire sécurité            | **7 000 – 15 000 €/an**   | **5 à 12 j.h/an**           |
+| **Coût annuel récurrent (Années suivantes)**    | **support SMSI**                | **7 000 € – 15 000 €/an** | **5 à 12 j.h/an**           |
+
+---
+
+## **10.4 — Budget prévisionnel *sans certification***
+
+| **Phase**                                   | **À qui ?**              | **Coût estimé**          | **Charge interne estimée** |
+|---------------------------------------------|---------------------------|---------------------------|-----------------------------|
+| Phase 0                                     | Interne                   | **0 €**                   | **2 à 4 j.h**               |
+| Phase 2 — Analyse des risques               | Prestataire sécurité      | **8 000 – 15 000 €**      | **5 à 10 j.h**              |
+| Phase 3 — Mise en œuvre                     | Prestataire sécurité      | **2 000 – 12 000 €**      | **10 à 25 j.h**             |
+| Phase 4 — Audit interne uniquement          | Prestataire sécurité      | **4 500 – 12 000 €**      | **2 à 6 j.h**               |
+| **Total Année 1 (sans certification)**      | **Prestataire uniquement** | **14 500 € – 39 000 €** | **19 à 45 j.h internes**   |
+|                                             |                           |                           |                             |
+| Phase 5 — Maintien sécurité (non certifié)  | Prestataire sécurité      | **5 000 – 12 000 €/an**   | **3 à 8 j.h/an**            |
+| **Coût annuel récurrent (Années suivantes)**| **support sécurité**      | **5 000 € – 12 000 €/an** | **3 à 8 j.h/an**            |
+
+---
+
+# 🎯 Synthèse ultra-courte (à mettre dans une slide)
+
+| Option                 | Total Année 1 (prestataire) | Charge interne Année 1 | Récurrent annuel (prestataire) | Charge interne annuelle |
+|------------------------|------------------------------|--------------------------|---------------------------------|--------------------------|
+| **Avec certification** | **19.5k – 52k €**            | **22 – 51 j.h**          | **7k – 15k €/an**               | **5 – 12 j.h/an**        |
+| **Sans certification** | **14.5k – 39k €**            | **19 – 45 j.h**          | **5k – 12k €/an**               | **3 – 8 j.h/an**         |
 
 ✔ Les coûts sont alignés avec les étapes.
 
 ---
 
-# **12. Planning prévisionnel — Année 2026**
+# **11. Planning prévisionnel — Année 2026**
 
-Toutes les durées ci-dessous sont cohérentes avec les estimations détaillées.
+| Phase                                         | Jan | Fév | Mar | Avr | Mai | Jui | Jui | Aoû | Sep | Oct | Nov | Déc |
+| --------------------------------------------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **T1 — Sélection prestataire** (4–5 semaines) | ███ | ███ |     |     |     |     |     |     |     |     |     |     |
+| **T2 — Analyse des risques** (3–6 semaines)   |     | ██  | ███ |     |     |     |     |     |     |     |     |     |
+| **T3 — Mise en œuvre** (1 à 6 mois)           |     |     | ██  | ███ | ███ | ███ | ███ | ███ |     |     |     |     |
+| **T4 — Audit officiel** (4–8 semaines)        |     |     |     |     | ██  | ███ | ███ |     |     |     |     |     |
 
-## **T1 — Sélection prestataire**
+* Jan : Sélection prestataire
+* Fév : Sélection → Analyse risques
+* Mar : Analyse risques → Début mise en œuvre
+* Avr : Mise en œuvre
+* Mai : Mise en œuvre → Audit
+* Juin : Audit
+* Juil : Audit / Mise en œuvre (selon charge)
+* Août : Pause ou actions internes
+* Sep : Reprise mise en œuvre (si besoin)
 
-Durée totale : **4–5 semaines**
-
-## **T2 — Analyse risques**
-
-Durée totale : **3–6 semaines**
-(dépend du prestataire, cohérent avec 6–13 jours effort)
-
-## **T3 — Mise en œuvre**
-
-Durée : **1 à 6 mois**
-
-## **T4 — Audit officiel**
-
-Durée : **4 à 8 semaines**
 
 ---
 
-# **13. Normes ISO prioritaires & pertinentes**
+# **12. Normes ISO prioritaires & pertinentes**
 
 | Norme ISO     | Rôle / Objet                                          | Ce qu’elle contient                                                                                 | Utilité pour ton projet (PME / Fintech / Data SCPI)                           |
 | ------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
@@ -387,17 +486,315 @@ Durée : **4 à 8 semaines**
 | **ISO 9001**  | **Management qualité**                                | Processus, documentation, qualité organisationnelle.                                                | 🌓 *Peut aider en gouvernance, mais non essentiel à la sécurité.*             |
 | **ISO 20000** | **Gestion des services IT (ITIL-like)**               | Support, tickets, gestion changements, incidents IT.                                                | ⚪ *Utile si vous formalisez un service IT interne.*                           |
 
+## **Précision ISO 27001**
+
+
+L’ISO 27001:2022 regroupe **93 contrôles** dans **4 grandes familles**
+👉 (Ce sont les blocs que les auditeurs regardent vraiment.)
+
+| **Thématique (ISO 27001:2022)**  | **Éléments clés / Exemples**                                                                                                                                   |
+| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Organisational Controls** (37) | Politique sécurité ; rôles & responsabilités ; gestion fournisseurs (SaaS/cloud) ; classification ; journalisation/monitoring ; continuité ; gestion incidents |
+| **People Controls** (8)          | Sensibilisation ; formation dev (secure coding) ; gestion des accès humains                                                                                    |
+| **Physical Controls** (14)       | Sécurité locaux ; matériel en mobilité ; protections physiques coworking/fournisseurs                                                                          |
+| **Technological Controls** (34)  | MFA ; IAM ; chiffrement (API/DB) ; développement sécurisé ; CI/CD sécurisé ; surveillance logs ; pentest ; sauvegardes                                         |
+
+
+### **Précision sur la certification ISO 27001 et la notion de périmètre**
+
+La norme **ISO 27001** impose que toute certification s’applique à un **périmètre clairement défini**.
+Ce périmètre correspond à la partie exacte du système d’information, des activités et des sites couverts par le **SMSI (Système de Management de la Sécurité de l’Information)**.
+
+Concrètement :
+
+* **L’entreprise choisit le périmètre** qu’elle souhaite faire certifier (ex. : une plateforme SaaS, un service, un ensemble de processus, une équipe ou la totalité de l’organisation).
+* Le périmètre doit être **décrit précisément** dans la documentation du SMSI et validé par l’auditeur.
+* **La certification ISO 27001 est délivrée uniquement sur ce périmètre**, et non sur l’ensemble de l’entreprise si celui-ci est partiel.
+* Le certificat officiel indique **explicitement le périmètre couvert**, généralement sous la forme :
+  *« Prestations couvertes par le SMSI : développement, hébergement et exploitation de la plateforme X »,*
+  ou
+  *« Gestion et traitement des données financières SCPI pour le service Y ».*
+
+Cela signifie que :
+
+* une entreprise peut être certifiée ISO 27001 **sur une partie seulement** de son activité,
+* et qu’un prestataire qui se présente comme "certifié ISO 27001" l’est **uniquement sur le périmètre précisé dans son certificat**.
+
+👉 **En résumé : le périmètre est un élément structurant du SMSI et fait partie intégrante de la certification.**
+Sans périmètre défini, **aucune certification ISO 27001 n’est possible**.
+
 ---
 
-# **14. Glossaire**
+## **Précision ISO 27005**
 
-**SMSI** : Système de management de la sécurité de l’information
-**Analyse de risques** : méthode pour identifier et prioriser les menaces.
-**Plan d’action** : mesures concrètes à mettre en place.
-**SaaS** : services externes utilisés par l’entreprise.
-**CI/CD** : pipeline d'intégration/déploiement.
-**ISO 27001** : gouvernance sécurité.
-**ISO 27002** : bonnes pratiques.
-**ISO 27005** : méthodologie analyse des risques.
-**LLM** : Large Language Model
-**PDCA** : cycle Plan → Do → Check → Act
+Pour votre analyse de risques, **voici les catégories exactes** qu’ISO 27005 attend (simplifiées mais complètes) :
+
+| **Niveau 1**          | **Sous-catégorie**             | **Éléments représentatifs**                                                                   |
+| --------------------- | ------------------------------ | --------------------------------------------------------------------------------------------- |
+| **Actifs primaires**  | Informations métiers           | Données SCPI ; informations investisseurs ; données financières ; données internes            |
+|                       | Processus métiers              | Diffusion données SCPI ; API partenaires ; reporting ; exploitation plateforme SaaS           |
+| **Actifs de support** | **Humains**                    | Dev ; Ops ; Data ; Support ; Direction ; Prestataires externes                                |
+|                       | **Processus organisationnels** | CI/CD ; gestion des accès ; gestion incidents ; gestion fournisseurs SaaS                     |
+|                       | **Matériels**                  | Postes collaborateurs ; postes d’administration ; matériel réseau du coworking (non maîtrisé) |
+|                       | **Logiciels / Applications**   | VueJS ; Symfony/API ; CRM ; back-office ; outils internes ; runners CI/CD                     |
+|                       | **Données**                    | Données SCPI ; données utilisateurs ; logs ; secrets ; clés API                               |
+|                       | **Services externes / Cloud**  | GCP/AWS ; SaaS critiques ; emailing ; monitoring ; hébergeurs ; bases partenaires             |
+
+---
+
+## **Précision ISO 27002**
+
+Voici une **liste ciblée pour une PME fintech avec API et applicatif web**.
+
+| **Domaine 27002**               | **Mesures clés (exemples)**                                                       |
+| ------------------------------- | --------------------------------------------------------------------------------- |
+| **Gestion des identités**       | MFA ; RBAC ; isolation des comptes privilégiés                                    |
+| **Chiffrement**                 | TLS 1.2+ ; chiffrement en base ; rotation périodique des clés                     |
+| **Journalisation & Monitoring** | Logs centralisés ; journaux accès back-office ; alertes sur actions sensibles     |
+| **Développement / DevSecOps**   | Revue de code ; SAST/SCA ; gestion secrets ; CI/CD sécurisé                       |
+| **Sauvegardes**                 | Sauvegardes quotidiennes ; tests de restauration ; rétention conforme obligations |
+| **Sécurité Cloud & SaaS**       | Clauses sécurité ; IAM granulaire ; journalisation activée ; segmentation         |
+| **Fournisseurs**                | Registre prestataires critiques ; validation sécurité ; exigences minimales       |
+
+
+# 📘 **Annexe A. Glossaire Sécurité & Gouvernance**
+
+## 🔷 **Concepts & Gouvernance**
+
+### **SMSI — Système de Management de la Sécurité de l’Information**
+
+Ensemble de politiques, procédures, processus et moyens permettant de gérer la sécurité de l’information dans l’entreprise, selon ISO 27001.
+
+### **Analyse de risques (ISO 27005)**
+
+Méthode structurée pour identifier :
+
+* les actifs,
+* les menaces,
+* les vulnérabilités,
+* les impacts,
+* les risques,
+  et pour définir les mesures de traitement associées.
+
+### **Plan d’action sécurité**
+
+Liste de mesures concrètes (techniques, organisationnelles, contractuelles) mises en place pour réduire les risques identifiés.
+
+### **PSSI — Politique de Sécurité des Systèmes d’Information**
+
+Document définissant les règles internes de sécurité (accès, mots de passe, journalisation, sauvegardes, gestion des incidents…).
+
+### **PDCA — Plan / Do / Check / Act**
+
+Cycle d’amélioration continue imposé par ISO 27001 :
+**Planifier**, **Mettre en œuvre**, **Contrôler**, **Améliorer**.
+
+---
+
+## 🔷 **Normes ISO 27000**
+
+### **ISO 27001 — Exigences de gouvernance sécurité**
+
+Norme certifiable définissant comment structurer un SMSI complet (politiques, risques, contrôles, audits, amélioration continue).
+
+### **ISO 27002 — Catalogue de bonnes pratiques**
+
+Décrit en détail comment appliquer les mesures de sécurité (contrôles) de l’annexe A.
+
+### **ISO 27005 — Gestion des risques**
+
+Méthodologie dédiée pour réaliser l’analyse de risques du SMSI.
+
+---
+
+## 🔷 **Technologie & Méthodes**
+
+### **SaaS — Software as a Service**
+
+Prestations logicielles hébergées chez un fournisseur tiers et accessibles via Internet.
+
+### **CI/CD — Continuous Integration / Continuous Deployment**
+
+Ensemble de pipelines automatisés permettant de développer, tester et déployer du code de manière continue.
+
+### **LLM — Large Language Model**
+
+Modèle de langage de grande taille (ex. GPT, Claude, Mistral) utilisé pour la génération de texte, l’analyse, l’automatisation, etc.
+
+---
+
+## 🔷 **Identité & Réseau**
+
+### **AD — Active Directory**
+
+Annuaire Microsoft utilisé pour gérer les identités, permissions, groupes et postes d’un environnement Windows.
+
+### **Azure AD / Entra ID**
+
+Service d’identités cloud de Microsoft utilisé pour les authentifications, les accès SaaS, et les environnements Azure.
+
+---
+
+## 🔷 **Réglementaire**
+
+### **RGPD — Règlement Général sur la Protection des Données**
+
+Text européen encadrant la protection des données personnelles (licéité, minimisation, transparence, droits utilisateurs, sécurité).
+
+---
+
+## 🔷 **Prestataires & Qualifications**
+
+### **PASSI — Prestataire d’Audit de Sécurité des Systèmes d’Information**
+
+Qualification ANSSI permettant à un prestataire de réaliser des audits sensibles (réseau, config, code, org, etc.).
+Gage de sérieux et de compétence pour les audits critiques.
+
+---
+
+## 🔷 **Méthodologies techniques**
+
+### **Tiering AD**
+
+Modèle en trois niveaux pour séparer les privilèges administratifs dans Active Directory (Tier 0, Tier 1, Tier 2).
+
+### **SOC — Security Operations Center**
+
+Service chargé de détecter, analyser et répondre aux incidents de sécurité (SIEM, EDR, XDR…).
+
+### **PTaaS — Pentest as a Service**
+
+Pentest en mode plateforme avec suivi continu, re-tests et intégration dans le cycle DevSecOps.
+
+---
+
+# 🎓 **Annexe B. Glossaire Certifications Techniques**
+
+## **A. Certifications Offensives (Pentest / Red Team)**
+
+| Certif                                               | Domaine            | Niveau            | Notes                  |
+| ---------------------------------------------------- | ------------------ | ----------------- | ---------------------- |
+| **OSCP** (Offensive Security Certified Professional) | Pentest            | Intermédiaire     | Très répandue          |
+| **OSWE** (Web Expert)                                | Pentest web avancé | Très élevé        | Exploitation de code   |
+| **OSEP** (Evasion)                                   | Pentest avancé     | Très élevé        | Contournement défenses |
+| **OSCE3**                                            | Expert             | Extrêmement élevé | Combo OSEP/OSWE/OSEE   |
+| **eWPTX**                                            | Pentest web avancé | Élevé             | Web apps complexes     |
+| **GPEN**                                             | Pentest réseau     | Intermédiaire     | SANS Institute         |
+
+---
+
+## **B. Certifications Cloud & Sécu Infra**
+
+| Certif                     | Domaine                  |
+| -------------------------- | ------------------------ |
+| **AZ-500**                 | Sécurité Microsoft Azure |
+| **AWS Security Specialty** | Sécurité AWS             |
+| **GCIA**                   | Analyse réseau           |
+| **GCIH**                   | Réponse à incident       |
+
+---
+
+## **C. Certifications Gouvernance / Management**
+
+| Certif                         | Domaine              |
+| ------------------------------ | -------------------- |
+| **ISO 27001 Lead Implementer** | Mise en place SMSI   |
+| **ISO 27001 Lead Auditor**     | Audit ISO            |
+| **CISSP**                      | Gouvernance sécurité |
+| **CISM**                       | Management sécurité  |
+
+---
+
+## **D. Certifications Web / AppSec**
+
+| Certif    | Domaine                          |
+| --------- | -------------------------------- |
+| **GWEB**  | Sécurité applications web (SANS) |
+| **GWAPT** | Pentest web (SANS)               |
+| **CSSLP** | Développement sécurisé           |
+
+# 🔥 **Annexe C. Tableau Consolidé des Prestataires (Pentest, Audit, ISO, Red Team, Bug Bounty)**
+
+## **Prestataires Pentest & Audit Applicatif**
+
+| Prestataire           | Site Web            | PASSI     | Certifs disponibles | Spécialités               | TJM estimé    | Notes                      |
+| --------------------- | ------------------- | --------- | ------------------- | ------------------------- | ------------- | -------------------------- |
+| **Vaadata**           | vaadata.com         | ❌         | OSCP, eWPTX         | Pentest web, mobile       | 600–900 €     | Bon ratio prix/qualité     |
+| **Connect3S**         | pentest-nice.fr     | ❌         | OSCP, OSWE, GWAPT   | Pentest à distance        | 700–950 €     | Très axé web               |
+| **SSHack**            | sshack.me           | ❌         | OSCP, OSEP          | Web/API, infra            | 700–900 €     | Experts indépendants       |
+| **Intuity**           | intuity.fr          | ❌         | OSCP                | Web, mobile, phishing     | 650–850 €     | Label France Cybersecurity |
+| **AlgoSecure**        | algosecure.fr       | ❌         | OSCP                | Pentest + audit org       | 600–850 €     | Prestataire polyvalent     |
+| **CAEIRUS**           | caeirus.com         | ❌         | OSCP                | Web/API, méthodo ANSSI    | 700–900 €     | PME FR                     |
+| **SysDream**          | sysdream.com        | **PASSI** | OSCP, OSWE, GWAPT   | Pentest web/mobile/API    | 950–1 200 €   | Acteur historique          |
+| **Wavestone**         | wavestone.com       | **PASSI** | OSCP, OSWE          | Pentest, audit app        | 1 000–1 500 € | Cabinet corporate          |
+| **Akyl**              | akyl.fr             | ❌         | OSCP                | Pentest, 360° cyber       | 600–900 €     | Bon sur PME                |
+| **Ziwit (HTTPCS)**    | ziwit.com           | ❌         | CEH/OSCP            | Pentest automatisé / SaaS | 600–900 €     | Beaucoup d’outillage       |
+| **Heliaq**            | heliaq.fr           | ❌         | OSCP                | Pentest web & API         | 700–900 €     | Structure jeune            |
+| **ACG Cybersecurity** | acgcybersecurity.fr | ❌         | OSCP/OSEP           | Web, infra                | 700–900 €     | Bon rapport qualité        |
+| **Synacktiv**         | synacktiv.com       | **PASSI** | OSWE, OSEP, GREM    | Pentest avancé / R&D      | 1 000–1 500 € | Niveau expert ++           |
+| **SEC-IT**            | sec-it.fr           | ❌         | OSCP                | Pentest web / mobile      | 700–900 €     | PME FR                     |
+| **Amossys**           | amossys.fr          | **PASSI** | OSCP, CEH           | Pentest + audits infra    | 1 000–1 300 € | Très haut niveau           |
+| **Intrinsec**         | intrinsec.com       | **PASSI** | OSCP/OSWE           | Pentest + red team        | 1 000–1 400 € | Réf. TIBER-FR              |
+| **BSSI**              | bssi.fr             | ❌         | OSCP/OSEP           | Pentest web/infra         | 700–950 €     | Très solide                |
+| **XMCO**              | xmco.fr             | **PASSI** | OSCP, OSWE          | Pentest & vulnérabilités  | 1 000–1 300 € | Référence FR               |
+
+---
+
+## **Prestataires Audits Infrastructure & Réseau**
+
+| Prestataire             | Site Web               | PASSI | Services              | Prix     | Notes                       |
+| ----------------------- | ---------------------- | ----- | --------------------- | -------- | --------------------------- |
+| **Amossys**             | amossys.fr             | ✅     | Réseau, infra, AD     | 5–15 k€  | Excellence technique        |
+| **Wavestone**           | wavestone.com          | ✅     | Infra, segmentation   | 15–40 k€ | Pour grandes structures     |
+| **Orange CyberDefense** | orangecyberdefense.com | ✅     | Infra, WiFi, firewall | 20–60 k€ | Industriel / OIV            |
+| **I-Tracing**           | i-tracing.com          | ❌     | Infra + SOC           | 4–12 k€  | Support opérationnel        |
+| **Nomios**              | nomios.fr              | ❌     | Firewall, NAC, réseau | 4–10 k€  | Très orienté réseau         |
+| **Exaprobe**            | exaprobe.com           | ❌     | Réseau, segmentation  | 5–12 k€  | Expertise infrastructure    |
+| **NBS System**          | nbs-system.com         | ❌     | Infra + hébergement   | 4–8 k€   | Connaît bien les hébergeurs |
+| **SEC-IT**              | sec-it.fr              | ❌     | Réseau + WiFi         | 3–8 k€   | Très adapté PME             |
+
+---
+
+## **Prestataires Audits Organisationnels / ISO 27001 / RGPD**
+
+| Prestataire     | Site Web        | PASSI     | Services               | Prix     | Notes               |
+| --------------- | --------------- | --------- | ---------------------- | -------- | ------------------- |
+| **AlgoSecure**  | algosecure.fr   | partiel   | ISO, PSSI, org         | 7–15 k€  | Très PME-friendly   |
+| **Digitemis**   | digitemis.com   | ❌         | ISO, RGPD, gouvernance | 10–25 k€ | Bon rapport qualité |
+| **CyberSecura** | cybersecura.com | ❌         | ISO 27001, RGPD        | 5–20 k€  | Conformité complète |
+| **Advensor**    | advensor.fr     | ❌         | ISO, audit org         | 8–20 k€  | Accompagnement SMSI |
+| **Wavestone**   | wavestone.com   | **PASSI** | ISO, RGPD, gouvernance | 20–60 k€ | Niveau corporate    |
+| **ChapsVision** | chapsvision.com | ❌         | Audit org, conformité  | 10–30 k€ | Groupe important    |
+
+---
+
+## **Prestataires Audit Active Directory / Azure AD**
+
+| Prestataire   | PASSI | Services              | Prix     | Notes                 |
+| ------------- | ----- | --------------------- | -------- | --------------------- |
+| **Synacktiv** | ✅     | Audit AD très avancé  | 15–30 k€ | Techniques offensives |
+| **Amossys**   | ✅     | AD, Azure AD          | 10–20 k€ | Hardening complet     |
+| **Intrinsec** | ✅     | AD, Azure AD, Tiering | 12–25 k€ | Réf. TIBER-FR         |
+| **I-Tracing** | ❌     | AD + SOC              | 10–20 k€ | Audit + exploitation  |
+
+---
+
+## **Prestataires Red Team**
+
+| Prestataire             | PASSI | Type                        | Prix      | Notes               |
+| ----------------------- | ----- | --------------------------- | --------- | ------------------- |
+| **Synacktiv**           | Oui   | Red team logique/physique   | 40–90 k€  | Meilleur niveau FR  |
+| **Intrinsec**           | Oui   | Red team TIBER-FR           | 35–80 k€  | Scénarios complexes |
+| **Orange CyberDefense** | Oui   | Social + logique + physique | 40–120 k€ | Industriel          |
+| **Wavestone**           | Oui   | Red team OIV                | 50–150 k€ | Ministères          |
+
+---
+
+## **Bug Bounty / PTaaS**
+
+| Prestataire   | Site Web      | Spécialité     | Notes                  |
+|---------------| ------------- | -------------- | ---------------------- |
+| **YesWeHack** | yeswehack.com | Bug bounty     | Très reconnu UE        |
+| **Yogosha**   | yogosha.com   | PTaaS + bounty | Secteur public & privé |
+
+---
