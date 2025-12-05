@@ -1,38 +1,47 @@
 # **Pilotage Sécurité — Document de Référence Global**
-
 **MeilleureSCPI.com — 2025**
 
-# Sommaire 
+---
 
-[TOC]
+# 1. Introduction
+
+## 1.1 Contexte
+
+Dans le cadre de mes objectifs annuels, il a été décidé de structurer la démarche
+de sécurité du SI et d’externaliser autant que possible cette responsabilité à un
+prestataire spécialisé.
+
+L’analyse présentée ici repose sur des hypothèses réalistes pour une PME SaaS,
+dans l’objectif d’identifier ce qui peut être externalisé et ce qui devra rester
+géré en interne.
+
+Le choix d’un cadre ISO 27001 (version allégée) fournit une structure reconnue,
+adaptée à notre taille, sans imposer une démarche lourde ou industrielle. Le
+périmètre préliminaire a été défini avec l’aide de ChatGPT afin d’obtenir une
+base cohérente avec notre organisation (applications, API, SaaS, données,
+pratiques internes). Il sera ensuite affiné avec le prestataire.
+
+Certaines actions resteront nécessairement internes (gestion des accès, pratiques
+dev/ops, décisions organisationnelles).
+
+Ce document présente la méthodologie retenue, les phases du projet et les
+estimations associées.
+
+**Mon rôle** : cadrage, sélection prestataire, pilotage interne, validation technique.
+
+## 1.2 Objectifs
+
+L’objectif est de renforcer la sécurité de nos applications et de notre SI de façon
+structurée et durable, en limitant au maximum la charge interne.
+
+Un autre enjeu est d’améliorer notre conformité globale : protection des données,
+gestion des accès, journalisation, et maîtrise des services externes. Ne pas le faire
+expose l’entreprise à des risques juridiques (RGPD, responsabilité), opérationnels
+(interruptions, pertes de données) et réputationnels.
 
 ---
 
-## **1. Contexte & Objectifs**
-
-MeilleureSCPI.com est une fintech spécialisée dans la donnée, l’agrégation SCPI et la gestion de patrimoines.
-Notre activité repose sur :
-
-* des applications web (VueJS),
-* un backend (Symfony),
-* des données sensibles clients & financières,
-* des services SaaS critiques (Google, GitHub, Dashlane, Datakeen…),
-* un mode de travail hybride / télétravail,
-* une montée en complexité (LLM, CI/CD, API externes…).
-
-Les objectifs du projet **Pilotage Sécurité** sont :
-
-* Réaliser une **analyse des risques complète** du SI,
-* Obtenir un **plan d’action priorisé et actionnable**,
-* Mettre en place un **accompagnement concret** fourni par un prestataire,
-* Définir une **gouvernance sécurité pérenne** (ISO 27001 light),
-* Structurer les bonnes pratiques internes.
-
-Ce document regroupe toutes les phases du projet, la recherche du prestataire, les workflows ISO, et le cahier des charges associé.
-
----
-
-## **2. Workflow global**
+# **2. Workflow global**
 
 ![Schema du projet global](./procedure_standard.png)
 
@@ -60,75 +69,7 @@ Plan Global :
 
 ## **3.2 Mail type à envoyer**
 
-On pourrais prévoir une deadline ?
-
-```markdown
-# ✉️ **Objet : Demande d’information – Accompagnement Sécurité & Analyse des Risques**
-
-Bonjour,
-
-Je vous contacte dans le cadre d’un projet d’amélioration de la sécurité au sein de **MeilleureSCPI.com**, fintech spécialisée dans la donnée immobilière et les investissements SCPI.
-
-Nous recherchons un prestataire capable de nous accompagner sur :
-
-* une **analyse des risques complète** de notre système d’information,
-* la **proposition d’une méthodologie adaptée** (ISO 27005, EBIOS RM ou hybride),
-* la **production d’un plan d’action priorisé et opérationnel**,
-* un **accompagnement** à la mise en œuvre des mesures retenues
-  *(nous ne recherchons pas un simple audit documentaire)*.
-
-## **Périmètre concerné**
-
-* applications web (VueJS),
-* API / backend Symfony,
-* services SaaS utilisés,
-* données manipulées,
-* organisation interne.
-
-Le périmètre final sera affiné lors du cadrage.
-
-## **Livrables attendus**
-
-1. Inventaire des actifs
-2. Analyse menaces / vulnérabilités
-3. Évaluation des risques
-4. Plan d’action priorisé
-5. Accompagnement et ateliers
-6. Synthèse exécutive
-7. Restitution orale
-
-## **Exigences minimales**
-
-* Au moins une certification : ISO 27001 Lead Implementer / Lead Auditor, CISSP, CISM, EBIOS RM ou équivalent.
-* Capacité d’accompagnement concret (recommandations, ateliers, support post-analyse).
-
-## **Informations attendues dans votre réponse**
-
-1. Votre compréhension du besoin
-2. Votre méthodologie
-3. Vos livrables habituels
-4. Votre capacité d’accompagnement
-5. Certifications & compétences de l’équipe
-6. Références (PME, SaaS, fintech)
-7. Estimation du périmètre optimal
-8. **Une indication budgétaire prévisionnelle** :
-
-    * votre **TJM**,
-    * et/ou une **fourchette indicative** pour une mission similaire
-      *(aucun devis formel n’est requis à cette étape)*
-9. Contraintes éventuelles
-
-## **Processus de sélection**
-
-1. Analyse de votre réponse
-2. Sélection de 2–3 prestataires
-3. Échange visio (30–45 min)
-4. Validation du périmètre final
-5. Demande de devis
-6. Sélection finale
-
-Merci pour votre retour.
-```
+Un template à été préparé en **Annexe D**
 
 ---
 
@@ -289,8 +230,19 @@ Audits récurrents : pentest, infra, RGPD, phishing.
 
 # **8. Phase 4 — Organisme certificateur & Audit officiel**
 
+La Phase 1 de l’audit ISO 27001 est un audit documentaire. Elle se fait
+généralement en visio et consiste à vérifier que le SMSI existe bien :
+politiques, procédures, registre des risques, périmètre, preuves minimales.
+
+La Phase 2 est l’audit opérationnel. L’auditeur vérifie que les pratiques
+décrites sont réellement appliquées : accès, sauvegardes, CI/CD, contrôle des
+documents, gestion des incidents, etc. Cette phase se déroule souvent sur site
+ou en visio selon le périmètre.
+
 * Phase 1 audit : **1–2 jours**
 * Phase 2 audit : **2–5 jours**
+
+Information plus exhaustives en Annexe E
 
 ---
 
@@ -668,6 +620,112 @@ Pentest en mode plateforme avec suivi continu, re-tests et intégration dans le 
 
 ---
 
+Parfait, j’ai compris :
+👉 **tu veux une colonne supplémentaire pour indiquer comment *détecter*, *anticiper* ou *éviter* le risque**, sous forme d’indicateurs ou de signaux faibles + actions préventives rapides.
+
+Je te fournis la version **avec la colonne supplémentaire**, **concis**, **pro**, **copiable dans ton document**.
+
+---
+
+# 🧩 **12 Analyse de Risques du Projet**
+
+## **A. Risques Organisationnels**
+
+| Risque                                | Impact              | Probabilité  | Niveau   | Indicateur / Prévention                                                                            |
+| ------------------------------------- | ------------------- | ------------ | -------- | -------------------------------------------------------------------------------------------------- |
+| Ressources internes insuffisantes     | Retards Phase 2 & 3 | Moyen        | 🔴 Élevé | • Charge >80% sur dev/CTO<br>• Absence du référent >1 semaine<br>→ **Allouer 0,5 j/semaine dédié** |
+| Manque de disponibilité du management | Décisions bloquées  | Moyen        | 🟠 Moyen | • Réunion repoussée >2 fois<br>→ **Bloquer un point mensuel sécurité**                             |
+| Dépendance à un collaborateur clé     | Perte d’historique  | Faible/Moyen | 🟠 Moyen | • Une seule personne maîtrise CI/CD/accès<br>→ **Documenter minimum vital dès Phase 1**            |
+
+---
+
+## **B. Risques liés au périmètre**
+
+| Risque                            | Impact                          | Probabilité | Niveau   | Indicateur / Prévention                                                                         |
+| --------------------------------- | ------------------------------- | ----------- | -------- | ----------------------------------------------------------------------------------------------- |
+| Périmètre trop large              | Explosion coûts/délais          | Moyen       | 🔴 Élevé | • Actifs >150<br>• Trop de SaaS dans scope<br>→ **Limiter scope à plateforme + SaaS critiques** |
+| Périmètre trop vague              | Mauvaise estimation prestataire | Moyen       | 🟠 Moyen | • Prestataire pose “trop” de questions<br>→ **Rédiger périmètre préliminaire clair (Phase 1)**  |
+| Découverte tardive de dépendances | Révision budget                 | Moyen/Élevé | 🔴 Élevé | • Nouveaux SaaS apparaissent en Phase 2<br>→ **Inventaire SaaS complet Phase 1**                |
+
+---
+
+## **C. Risques liés au prestataire**
+
+| Risque                            | Impact                  | Probabilité  | Niveau          | Indicateur / Prévention                                                                |
+| --------------------------------- | ----------------------- | ------------ | --------------- | -------------------------------------------------------------------------------------- |
+| Prestataire trop cher / corporate | Budget ×2–4             | Moyen        | 🔴 Élevé        | • TJM >1100€<br>→ **Filtrage initial par TJM max**                                     |
+| Prestataire sous-qualifié         | Analyse insuffisante    | Faible/Moyen | 🟠 Moyen        | • Aucun Lead Auditor/Implementer<br>→ **Exiger 1 certif min + références SaaS**        |
+| Dépendance forte                  | Coûts récurrents élevés | Moyen        | 🟠 Moyen        | • Beaucoup d’ateliers non transférés<br>→ **Inclure transfert compétence obligatoire** |
+| Planning prestataire non tenu     | Décalage global         | Faible       | 🟡 Faible/Moyen | • Retard >1 semaine début mission<br>→ **Clauses planning dans devis**                 |
+
+---
+
+## **D. Risques budgétaires**
+
+| Risque                              | Impact                   | Probabilité | Niveau   | Indicateur / Prévention                                                                |
+| ----------------------------------- | ------------------------ | ----------- | -------- | -------------------------------------------------------------------------------------- |
+| Sous-estimation Phase 3             | +5k à +20k €             | Élevé       | 🔴 Élevé | • Beaucoup de risques “Élevés” dans analyse<br>→ **Prioriser P1/P2 et reporter P3**    |
+| Sous-estimation coûts certification | +2 à +5k €               | Moyen       | 🟠 Moyen | • Certif affichée “trop vague”<br>→ **Valider coûts avec 1 certificateur dès Phase 1** |
+| Mesures techniques coûteuses        | Investissement non prévu | Moyen       | 🔴 Élevé | • CI/CD ou IAM non maîtrisés<br>→ **Audit initial CI/CD optionnel Phase 1**            |
+
+---
+
+## **E. Risques planning**
+
+| Risque         | Impact                 | Probabilité  | Niveau   | Indicateur / Prévention                                                     |
+| -------------- | ---------------------- | ------------ | -------- | --------------------------------------------------------------------------- |
+| Retard Phase 2 | Décalage planning      | Moyen        | 🔴 Élevé | • Besoins internes pas prêts<br>→ **Préparer actifs/SaaS avant signature**  |
+| Retard Phase 3 | Glissement 2–6 mois    | Moyen/Élevé  | 🔴 Élevé | • Trop de mesures “majeures” P2/P3<br>→ **Limiter scope ISO 27002 Year 1**  |
+| Audit repoussé | Décalage certification | Faible/Moyen | 🟠 Moyen | • Certificateur pas disponible<br>→ **Bloquer un créneau 3 mois en avance** |
+
+---
+
+## **F. Risques techniques**
+
+| Risque                        | Impact              | Probabilité | Niveau   | Indicateur / Prévention                                                   |
+| ----------------------------- | ------------------- | ----------- | -------- | ------------------------------------------------------------------------- |
+| Volume d’actifs sous-estimé   | Analyse plus longue | Élevé       | 🔴 Élevé | • Liste >150 actifs<br>→ **Inventaire détaillé Phase 1**                  |
+| CI/CD plus complexe que prévu | Retards & budget    | Moyen       | 🟠 Moyen | • Beaucoup de runners/secrets<br>→ **État des lieux CI/CD pré-mission**   |
+| Dépendance SaaS non évaluée   | Révision périmètre  | Moyen       | 🟠 Moyen | • Permissions SaaS floues<br>→ **Lister roles/permissions Google/GitHub** |
+
+---
+
+## **G. Risques réglementaires**
+
+| Risque              | Impact             | Probabilité  | Niveau          | Indicateur / Prévention                                   |
+| ------------------- | ------------------ | ------------ | --------------- | --------------------------------------------------------- |
+| Changements RGPD    | Travaux non prévus | Faible/Moyen | 🟡 Faible/Moyen | • Suivi CNIL faible<br>→ **Veille RGPD trimestrielle**    |
+| Évolution ISO 27001 | Adaptation mineure | Faible       | 🟢 Faible       | • Version 2022 déjà récente<br>→ Aucun besoin particulier |
+
+---
+
+## **H. Risques gouvernance**
+
+| Risque                           | Impact               | Probabilité  | Niveau   | Indicateur / Prévention                                       |
+| -------------------------------- | -------------------- | ------------ | -------- | ------------------------------------------------------------- |
+| Sponsoring direction insuffisant | Projet ralenti       | Faible/Moyen | 🟠 Moyen | • Décisions >2 semaines<br>→ **Point direction fixe mensuel** |
+| Mauvaise communication interne   | Résistance / lenteur | Moyen        | 🟠 Moyen | • Feedback devs négatif<br>→ **Kickoff interne du projet**    |
+
+---
+
+# 🎯 **Top 5 risques + indicateurs**
+
+1. **Périmètre trop large**
+   → Indicateur : >150 actifs / trop de SaaS / périmètre flou
+
+2. **Charge interne insuffisante**
+   → Indicateur : disponibilité <0,5 j/semaine
+
+3. **Explosion Phase 3**
+   → Indicateur : trop de mesures P2/P3 dans l’analyse
+
+4. **Sous-estimation complexité CI/CD & IAM**
+   → Indicateur : secrets non maîtrisés / nombreux pipelines
+
+5. **Prestataire inadéquat**
+   → Indicateur : pas de certifs, pas de références SaaS
+
+
 # 🎓 **Annexe B. Glossaire Certifications Techniques**
 
 ## **A. Certifications Offensives (Pentest / Red Team)**
@@ -798,3 +856,205 @@ Pentest en mode plateforme avec suivi continu, re-tests et intégration dans le 
 | **Yogosha**   | yogosha.com   | PTaaS + bounty | Secteur public & privé |
 
 ---
+
+
+# 📘 **Annexe C. Template de mail pour selection prestataire**
+
+On pourrais prévoir une deadline ?
+
+```markdown
+# ✉️ **Objet : Demande d’information – Accompagnement Sécurité & Analyse des Risques**
+
+Bonjour,
+
+Je vous contacte dans le cadre d’un projet d’amélioration de la sécurité au sein de **MeilleureSCPI.com**, fintech spécialisée dans la donnée immobilière et les investissements SCPI.
+
+Nous recherchons un prestataire capable de nous accompagner sur :
+
+* une **analyse des risques complète** de notre système d’information,
+* la **proposition d’une méthodologie adaptée** (ISO 27005, EBIOS RM ou hybride),
+* la **production d’un plan d’action priorisé et opérationnel**,
+* un **accompagnement** à la mise en œuvre des mesures retenues
+  *(nous ne recherchons pas un simple audit documentaire)*.
+
+## **Périmètre concerné**
+
+* applications web (VueJS),
+* API / backend Symfony,
+* services SaaS utilisés,
+* données manipulées,
+* organisation interne.
+
+Le périmètre final sera affiné lors du cadrage.
+
+## **Livrables attendus**
+
+1. Inventaire des actifs
+2. Analyse menaces / vulnérabilités
+3. Évaluation des risques
+4. Plan d’action priorisé
+5. Accompagnement et ateliers
+6. Synthèse exécutive
+7. Restitution orale
+
+## **Exigences minimales**
+
+* Au moins une certification : ISO 27001 Lead Implementer / Lead Auditor, CISSP, CISM, EBIOS RM ou équivalent.
+* Capacité d’accompagnement concret (recommandations, ateliers, support post-analyse).
+
+## **Informations attendues dans votre réponse**
+
+1. Votre compréhension du besoin
+2. Votre méthodologie
+3. Vos livrables habituels
+4. Votre capacité d’accompagnement
+5. Certifications & compétences de l’équipe
+6. Références (PME, SaaS, fintech)
+7. Estimation du périmètre optimal
+8. **Une indication budgétaire prévisionnelle** :
+
+    * votre **TJM**,
+    * et/ou une **fourchette indicative** pour une mission similaire
+      *(aucun devis formel n’est requis à cette étape)*
+9. Contraintes éventuelles
+
+## **Processus de sélection**
+
+1. Analyse de votre réponse
+2. Sélection de 2–3 prestataires
+3. Échange visio (30–45 min)
+4. Validation du périmètre final
+5. Demande de devis
+6. Sélection finale
+
+Merci pour votre retour.
+```
+
+Voici une explication **claire, concrète et réaliste** de **comment se déroule vraiment un audit ISO 27001**, et pourquoi **1–2 jours** peut suffire pour la Phase 1.
+
+Tu pourras intégrer cette version concise dans ton document, et garder la version détaillée pour ta compréhension interne.
+
+---
+
+# ✅ **Explication simple (à mettre dans ton document)**
+
+```markdown
+La Phase 1 de l’audit ISO 27001 est un audit documentaire. Elle se fait
+généralement en visio et consiste à vérifier que le SMSI existe bien :
+politiques, procédures, registre des risques, périmètre, preuves minimales.
+
+La Phase 2 est l’audit opérationnel. L’auditeur vérifie que les pratiques
+décrites sont réellement appliquées : accès, sauvegardes, CI/CD, contrôle des
+documents, gestion des incidents, etc. Cette phase se déroule souvent sur site
+ou en visio selon le périmètre.
+```
+
+---
+
+# ✅ **Annexe E - détail de la procédure d'audit avec l'organisme certifié**
+
+## 🔹 **Pourquoi la Phase 1 est courte (1–2 jours)**
+
+Parce qu’elle ne vérifie **aucune pratique réelle**.
+
+Elle sert à répondre à une seule question :
+👉 *“Votre SMSI est-il suffisamment en place pour justifier un audit opérationnel (Phase 2) ?”*
+
+L’auditeur ne cherche pas encore à vérifier si vous faites les choses, mais si vous avez :
+
+* une politique sécurité,
+* une description du périmètre,
+* un registre de risques,
+* un plan d’action,
+* une gouvernance minimale (rôles, responsabilités),
+* une revue de direction,
+* un planning d’audit interne,
+* des preuves initiales.
+
+C’est pourquoi **un seul auditeur** suffit souvent, et **la visio** est largement suffisante.
+
+---
+
+## 🔹 **Déroulé typique de la Phase 1**
+
+**Durée : 0,5 à 2 jours — 100% documentaire.**
+
+1. **Réunion d’ouverture (visio)**
+2. Présentation du périmètre
+3. Vérification des documents obligatoires du SMSI
+4. Vérification que l’analyse de risques existe et est cohérente
+5. Vérification qu’il y a un cycle PDCA (même minimal)
+6. Vérification que les contrôles de l’annexe A ont bien été adressés
+7. Analyse des preuves documentaires (extraits, captures, modèles)
+8. Points complémentaires
+9. **Compte rendu — décision de passer en Phase 2 ou non**
+
+Très souvent :
+👉 *L’auditeur demande des preuves supplémentaires par email / dossier partagé.*
+
+---
+
+## 🔹 **La Phase 2 : comment ça se passe vraiment ?**
+
+**Durée : 2 à 5 jours**, selon périmètre et maturité.
+Elle vérifie que **ce que vous déclarez, vous le faites réellement**.
+
+### **Where ?**
+
+* sur site (souvent recommandé),
+* en visio si l’entreprise est 100% SaaS / cloud / distancielle (assez fréquent aujourd’hui),
+* parfois hybride (1 jour sur site + suite à distance).
+
+### **Contenu typique**
+
+L’auditeur demande des preuves concrètes sur :
+
+* la gestion des accès (ex : démonstration Google Workspace / Dashlane),
+* la gestion GitHub (droits, MFA),
+* les journaux (captures ou démos),
+* les backups (preuve de restauration),
+* les processus CI/CD,
+* les preuves de sensibilisation,
+* l’analyse de risques (preuve de mise à jour),
+* la gestion des incidents,
+* les revues régulières,
+* les contrats SaaS (clauses sécurité).
+
+### **Interlocuteurs**
+
+* CTO / dev senior pour la partie technique,
+* direction pour la gouvernance,
+* éventuellement dev / ops pour démonstration CI/CD.
+
+### **Livrable final**
+
+* rapport Phase 2,
+* liste des non-conformités (mineures / majeures),
+* plan d’action de correction,
+* décision du comité de certification.
+
+---
+
+## 🔹 **Pourquoi certaines certifications sont obtenues en 3–4 jours ?**
+
+Parce que :
+
+* beaucoup de PME ont un périmètre **réduit**,
+* c’est le **SMSI**, pas la technique, qui est certifié,
+* l’entreprise est souvent **100% SaaS**
+  (pas de réseau interne, pas de firewall, pas de serveurs on-premise),
+* une grande partie se valide **en visio**.
+
+Une entreprise 100% SaaS (comme vous) a des audits significativement plus courts.
+
+---
+
+## 🔹 **En résumé**
+
+* **Phase 1 = visio, documentaire, courte**
+* **Phase 2 = démonstration, preuves, technique, plus longue**
+* Déroulé très cadré et beaucoup plus simple qu’un audit technique.
+
+---
+
+Si tu veux, je peux rédiger **une version propre à insérer directement**, intégrée à ta mise en page actuelle.

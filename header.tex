@@ -1,0 +1,33 @@
+% ==== FONTS ====
+\usepackage{fontspec}
+
+% Font principale
+\setmainfont{Noto Sans}
+\setsansfont{Noto Sans}
+
+% Monospace
+\setmonofont{Noto Sans Mono}
+
+% Emoji (Noto Color Emoji)
+\newfontfamily\emoji{Noto Color Emoji}[Renderer=Harfbuzz]
+
+% Forcer l’usage de sans-serif par défaut
+\renewcommand{\familydefault}{\sfdefault}
+
+% Taille globale du document
+\AtBeginDocument{\fontsize{10pt}{12pt}\selectfont}
+
+% ==== TABLES ====
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{longtable}
+\renewcommand{\arraystretch}{1.15}
+
+% ==== LAYOUT ====
+\usepackage{setspace}
+\setstretch{1.05}
+
+% Corrige les emojis invisibles
+\makeatletter
+\DeclareRobustCommand{\emoji}[1]{{\emoji #1}}
+\makeatother

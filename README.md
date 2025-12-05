@@ -3,6 +3,55 @@
 **Programme de cybersécurité 2026**
 Startup Fintech SCPI (< 10 employés)
 
+
+# Génération du document 
+## installation pandoc
+```shell
+sudo apt install pandoc
+sudo apt install texlive texlive-xetex texlive-fonts-recommended texlive-latex-extra
+sudo apt install fonts-noto fonts-noto-color-emoji
+sudo apt install fonts-noto fonts-noto-core fonts-noto-color-emoji \
+                 fonts-noto-mono fonts-noto-sans
+sudo apt update
+sudo apt install texlive-luatex texlive-xetex texlive-fonts-extra texlive-latex-extra
+
+
+
+```
+
+
+
+
+
+## Génération
+
+Commande de conversion (avec table des matières)
+* --toc génère la table des matières à partir des titres
+* Police lisible
+* Marges correctes
+*  Output professionnel
+
+```shell
+pandoc Master.md \
+  --pdf-engine=xelatex \
+  --toc \
+  -V mainfont="DejaVu Sans" \
+  -V monofont="DejaVu Sans Mono" \
+  -V geometry:margin=1in \
+  -o 'Pilotage Sécurité — Document de Référence Global.pdf'
+
+pandoc Master.md \
+  --pdf-engine=xelatex \
+  --toc \
+  -H table-format.tex \
+  -V mainfont="Noto Sans" \
+  -V fontsize=10pt \
+  -V geometry:margin=1in \
+  -o "PDF.pdf"
+
+```
+
+
 ---
 
 ## 📁 Structure du Repository
