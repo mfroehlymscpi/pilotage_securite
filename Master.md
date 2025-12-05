@@ -620,13 +620,6 @@ Pentest en mode plateforme avec suivi continu, re-tests et intégration dans le 
 
 ---
 
-Parfait, j’ai compris :
-👉 **tu veux une colonne supplémentaire pour indiquer comment *détecter*, *anticiper* ou *éviter* le risque**, sous forme d’indicateurs ou de signaux faibles + actions préventives rapides.
-
-Je te fournis la version **avec la colonne supplémentaire**, **concis**, **pro**, **copiable dans ton document**.
-
----
-
 # 🧩 **12 Analyse de Risques du Projet**
 
 ## **A. Risques Organisationnels**
@@ -1054,7 +1047,3 @@ Une entreprise 100% SaaS (comme vous) a des audits significativement plus courts
 * **Phase 1 = visio, documentaire, courte**
 * **Phase 2 = démonstration, preuves, technique, plus longue**
 * Déroulé très cadré et beaucoup plus simple qu’un audit technique.
-
----
-
-Si tu veux, je peux rédiger **une version propre à insérer directement**, intégrée à ta mise en page actuelle.
