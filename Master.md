@@ -923,25 +923,6 @@ Le périmètre final sera affiné lors du cadrage.
 Merci pour votre retour.
 ```
 
-Voici une explication **claire, concrète et réaliste** de **comment se déroule vraiment un audit ISO 27001**, et pourquoi **1–2 jours** peut suffire pour la Phase 1.
-
-Tu pourras intégrer cette version concise dans ton document, et garder la version détaillée pour ta compréhension interne.
-
----
-
-# ✅ **Explication simple (à mettre dans ton document)**
-
-```markdown
-La Phase 1 de l’audit ISO 27001 est un audit documentaire. Elle se fait
-généralement en visio et consiste à vérifier que le SMSI existe bien :
-politiques, procédures, registre des risques, périmètre, preuves minimales.
-
-La Phase 2 est l’audit opérationnel. L’auditeur vérifie que les pratiques
-décrites sont réellement appliquées : accès, sauvegardes, CI/CD, contrôle des
-documents, gestion des incidents, etc. Cette phase se déroule souvent sur site
-ou en visio selon le périmètre.
-```
-
 ---
 
 # ✅ **Annexe E - détail de la procédure d'audit avec l'organisme certifié**
